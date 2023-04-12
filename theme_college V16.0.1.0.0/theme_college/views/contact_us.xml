@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+        <template id="college_contact_us" name="College Contact Us" inherit_id="website.contactus">
+            <xpath expr="//div[@id='wrap']" position="replace">
+                <section class="contact">
+
+                    <div class="contact_main">
+                        <div class="container">
+                            <div class="row contact_page">
+                                <div class="col-lg-6 col-md-6 col-12">
+                                    <div class="contact_details">
+                                        <div class="heading_c">
+                                            <h2 class="main">Contact Us</h2>
+                                        </div>
+                                        <p class="abt">
+                                            As you might expect of a company that began as a high-end interiors
+                                            contractor, we pay strict attention.
+                                        </p>
+                                        <section class="s_website_form" data-vcss="001" data-snippet="s_website_form">
+                                            <div class="contact_form">
+                                                <span class="hidden" data-for="contactus_form"
+                                                      t-att-data-values="{'email_to': res_company.email}"/>
+                                                <form id="contactus_form" action="/website/form/" method="post"
+                                                      enctype="multipart/form-data" class="o_mark_required"
+                                                      data-mark="*" data-model_name="mail.mail"
+                                                      data-success-mode="redirect"
+                                                      data-success-page="/contactus-thank-you" data-pre-fill="true">
+                                                    <div class="s_website_form_rows row s_col_no_bgcolor">
+                                                        <div class="row mb-5">
+                                                            <div class="mb-0 py-2 col-6 s_website_form_field s_website_form_custom s_website_form_required"
+                                                                 data-type="char" data-name="Field">
+                                                                <div class="row s_col_no_resize s_col_no_bgcolor">
+                                                                    <div class="col-sm">
+                                                                        <input id="contact1" type="text"
+                                                                               class="form-control s_website_form_input"
+                                                                               name="name" required=""
+                                                                               placeholder="Your name"/>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="mb-0 py-2 col-6 s_website_form_field s_website_form_required"
+                                                                 data-type="email" data-name="Field">
+                                                                <div class="row s_col_no_resize s_col_no_bgcolor">
+                                                                    <div class="col-sm">
+                                                                        <input id="contact3" type="email"
+                                                                               class="form-control s_website_form_input"
+                                                                               name="email_from" required=""
+                                                                               placeholder="Your email"/>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row mb-5">
+                                                            <div class="mb-0 py-2 col-12 s_website_form_field s_website_form_required"
+                                                                 data-type="char" data-name="Field">
+                                                                <div class="row s_col_no_resize s_col_no_bgcolor">
+                                                                    <div class="col-sm">
+                                                                        <input id="contact5" type="text"
+                                                                               class="form-control s_website_form_input"
+                                                                               name="subject" required=""
+                                                                               placeholder="Subject"/>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row mb-5">
+                                                            <div class="mb-0 py-2 col-12 s_website_form_field s_website_form_custom s_website_form_required"
+                                                                 data-type="text" data-name="Field">
+                                                                <div class="row s_col_no_resize s_col_no_bgcolor">
+                                                                    <div class="col-sm">
+                                                                        <textarea id="contact6"
+                                                                                  class="form-control s_website_form_input"
+                                                                                  name="description" rows="5"
+                                                                                  required=""
+                                                                                  placeholder="Message"></textarea>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="mb-0 py-2 col-12 s_website_form_field s_website_form_dnone">
+                                                            <div class="row s_col_no_resize s_col_no_bgcolor">
+                                                                <div class="col-sm">
+                                                                    <input id="contact7" type="hidden"
+                                                                           class="form-control s_website_form_input"
+                                                                           name="email_to"/>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="text-center text-md-left s_website_form_submit"
+                                                             data-name="Submit Button">
+                                                            <div style="width: 200px;" class="s_website_form_label"/>
+                                                            <a href="#" role="button"
+                                                               class="btn btn-primary btn-contact o_website_form_send">
+                                                                Submit
+                                                            </a>
+                                                            <span id="s_website_form_result"></span>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </section>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-12">
+                                    <div class="contact-page-second-col">
+                                        <div class="address">
+                                            <div class="wrapper">
+                                                <ul class="list-unstyled mb-0 ps-2">
+                                                    <li>My Company</li>
+                                                    <li>
+                                                        <i class="fa fa-map-marker fa-fw me-2"/>
+                                                        <span class="o_force_ltr">3575 Fake Buena Vista Avenue</span>
+                                                    </li>
+                                                    <li>
+                                                        <i class="fa fa-phone fa-fw me-2"/>
+                                                        <span class="o_force_ltr">+1 (650) 555-0111</span>
+                                                    </li>
+                                                    <li>
+                                                        <i class="fa fa-1x fa-fw fa-envelope me-2"/>
+                                                        <span>info@yourcompany.example.com</span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="wrapper">
+                                                <div class="cc">United states</div>
+                                                <p class="info">195 E Parker Square Dr, Parker, CO 801</p>
+                                                <p>
+                                                    <a href="tel:+4733378901">+47 333 78 901</a>
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <section class="map">
+                                                <div class="map-responsive">
+                                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15658.881983874671!2d75.87971722644363!3d11.134181973268767!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba651d1fb20b40b%3A0xd15c44b13dfe431c!2sThenhipalam%2C%20Kerala!5e0!3m2!1sen!2sin!4v1598930664895!5m2!1sen!2sin"
+                                                            width="100%" height="450" frameborder="0" style="border:0;"
+                                                            allowfullscreen=""
+                                                            aria-hidden="false"
+                                                            tabindex="0"/>
+                                                </div>
+                                            </section>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </xpath>
+        </template>
+    </data>
+</odoo>

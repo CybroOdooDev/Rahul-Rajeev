@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<odoo>
+
+    <record id="menu_facility" model="website.menu">
+        <field name="name">Facility</field>
+        <field name="url">/college_facility</field>
+        <field name="parent_id" ref="website.main_menu"/>
+        <field name="sequence">57</field>
+    </record>
+
+    <template id="theme_college.college_facility" name="Facility">
+        <!--Course -->
+        <style>
+            .home_header{
+            display: none;
+            }
+        </style>
+        <t t-call="website.layout">
+            <div class="container-fluid">
+                <div class="container">
+                    <div class="faclility">
+                        <div class="container">
+                            <h3 class="tittle">Facilities</h3>
+                            <div class="course-grids">
+                                <div class="row">
+                                    <div class="col-md-6 course-grid">
+                                        <div class="mask">
+                                            <img src="/theme_college/static/src/images/c3.jpg"
+                                                 class="img-responsive zoom-img"/>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 course-grid1 gri">
+                                        <h4>In pulvinar lectus</h4>
+                                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Suspendisse et
+                                            justo. Praesent mattis commodo augue. Aliquam ornare hendrerit augue. Cras
+                                            tellus. In pulvinar lectus a est. Curabitur eget orciLorem ipsum dolor sit
+                                            amet, consectetuer adipiscing elit. Suspendisse et justo. Praesent mattis
+                                            commodo augue. Aliquam ornare hendrerit augue. Cras tellus. In pulvinar
+                                            lectus a est. Curabitur eget orci..
+                                        </p>
+                                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Suspendisse et
+                                            justo. Praesent mattis commodo augue. Aliquam ornare hendrerit augue. Cras
+                                            tellus. In pulvinar lectus a est. Curabitur eget orci.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </t>
+    </template>
+
+</odoo>
