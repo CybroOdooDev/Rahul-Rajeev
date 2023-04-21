@@ -1,0 +1,15 @@
+a#myModal{
+    margin-top: -56px;
+    margin-left: 1137px;
+}
+
+@media screen and (max-width: 500px) {
+    a#myModal{
+        margin-top: -47px;
+        margin-left: 182px;
+    }
+    .modal-dialog.modal-content{
+        min-height: 440px !important;
+        max-width: 340px !important;
+    }
+}

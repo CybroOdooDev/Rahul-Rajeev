@@ -1,0 +1,308 @@
+<odoo>
+    <template id="college_scholarship_form_snippet" inherit_id="website.snippets"
+              name="Scholarship Form">
+        <xpath expr="//div[@id='snippet_feature']/div[hasclass('o_panel_body')]"
+               position="inside">
+            <t t-snippet="theme_college.college_scholarship_form"
+               t-thumbnail="/website/static/src/img/snippets_thumbs/s_website_form.svg"/>
+        </xpath>
+    </template>
+    <template id="college_partner_snippet" inherit_id="website.snippets"
+              name="College Partner">
+        <xpath expr="//div[@id='snippet_feature']/div[hasclass('o_panel_body')]"
+               position="inside">
+            <t t-snippet="theme_college.college_partner"
+               t-thumbnail="/website/static/src/img/snippets_thumbs/s_product_list.svg"/>
+        </xpath>
+    </template>
+    <template id="college_location_snippet" inherit_id="website.snippets" name="College Location">
+        <xpath expr="//div[@id='snippet_feature']/div[hasclass('o_panel_body')]"
+               position="inside">
+            <t t-snippet="theme_college.college_location"
+               t-thumbnail="/theme_college/static/src/images/location.jpg"/>
+        </xpath>
+    </template>
+    <template id="home_college_banner_snippet" inherit_id="website.snippets"
+              name="Home Banner">
+        <xpath expr="//div[@id='snippet_feature']/div[hasclass('o_panel_body')]"
+               position="inside">
+            <t t-snippet="theme_college.home_college_banner"
+               t-thumbnail="/website/static/src/img/snippets_thumbs/s_carousel.svg"
+            />
+        </xpath>
+    </template>
+
+
+    <template id="college_scholarship_form" name="College Scholarship Form">
+        <Section class="scholarship_form">
+            <div class="container">
+                <div class="row pb-5 scholarship">
+                    <div class="col-lg-6 col-md-6 col-sm-12 pt-5">
+                        <div class="card ">
+                            <h3>Scholarship Form</h3>
+                            <!--                            <div class="card-body">-->
+                                <section class="s_website_form" data-vcss="001" data-snippet="s_website_form">
+                                    <div class="container scholarship_container">
+                                        <form id="contactus_form" action="/website/form/" method="post" enctype="multipart/form-data" class="o_mark_required" data-mark="*" data-model_name="mail.mail" data-success-mode="redirect" data-success-page="/contactus-thank-you" data-pre-fill="true">
+                                            <div class="s_website_form_rows row s_col_no_bgcolor">
+                                                <div class="form-group col-12 s_website_form_field s_website_form_custom s_website_form_required" data-type="char" data-name="Field">
+                                                    <div class="row s_col_no_resize s_col_no_bgcolor">
+                                                        <div class="col-sm">
+                                                            <input id="contact1" type="text" class="form-control s_website_form_input" name="name" required="" placeholder="Your name"/>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group col-12 s_website_form_field s_website_form_required" data-type="email" data-name="Field">
+                                                    <div class="row s_col_no_resize s_col_no_bgcolor">
+                                                        <div class="col-sm">
+                                                            <input id="contact3" type="email" class="form-control s_website_form_input" name="email_from" required="" placeholder="Your email"/>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group col-12 s_website_form_field s_website_form_required" data-type="char" data-name="Field">
+                                                    <div class="row s_col_no_resize s_col_no_bgcolor">
+                                                        <div class="col-sm">
+                                                            <input id="contact5" type="text" class="form-control s_website_form_input" name="subject" required="" placeholder="Subject"/>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group col-12 s_website_form_field s_website_form_custom s_website_form_required" data-type="text" data-name="Field">
+                                                    <div class="row s_col_no_resize s_col_no_bgcolor">
+                                                        <div class="col-sm">
+                                                            <textarea id="contact6" class="form-control s_website_form_input" name="description" required="" placeholder="Message"></textarea>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group col-12 s_website_form_field s_website_form_dnone">
+                                                    <div class="row s_col_no_resize s_col_no_bgcolor">
+                                                        <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="contact7">
+                                                            <span class="s_website_form_label_content">Email To</span>
+                                                        </label>
+                                                        <div class="col-sm">
+                                                            <input id="contact7" type="hidden" class="form-control s_website_form_input" name="email_to"/>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group col-12 s_website_form_submit" data-name="Submit Button">
+                                                    <div style="width: 200px;" class="s_website_form_label"/>
+                                                    <a href="#" role="button" class="btn btn-primary btn-lg s_website_form_send">Submit</a>
+                                                    <span id="s_website_form_result"></span>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </section>
+
+                            <!--                            </div>-->
+                        </div>
+                    </div>
+                    <div class=" col-lg-6 col-md-6 col-sm-12 pt-5">
+                        <div class="scholarship_img">
+                            <img class="img-fluid" src="/theme_college/static/src/images/img1.png"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </Section>
+    </template>
+
+    <template id="college_partner" name="College Partners">
+        <section class="partner">
+
+            <div class="container">
+                <h3>
+                    Placement
+                    <span>Cell</span>
+                </h3>
+            </div>
+
+            <div class="container">
+                <div class="wrapper">
+                    <div class="row company">
+                        <div class="col-lg-2 col-md-4 col-sm-4 col-6">
+                            <img src="/theme_college/static/src/images/partner/logo1.jpg"/>
+                        </div>
+                        <div class="col-lg-2 col-md-4 col-sm-4 col-6">
+                            <img src="/theme_college/static/src/images/partner/logo2.jpg"/>
+                        </div>
+                        <div class="col-lg-2 col-md-4 col-sm-4 col-6">
+                            <img src="/theme_college/static/src/images/partner/logo3.jpg"/>
+                        </div>
+                        <div class="col-lg-2 col-md-4 col-sm-4 col-6">
+                            <img src="/theme_college/static/src/images/partner/logo4.jpg"/>
+                        </div>
+                        <div class="col-lg-2 col-md-4 col-sm-4 col-6">
+                            <img src="/theme_college/static/src/images/partner/logo2.jpg"/>
+                        </div>
+                        <div class="col-lg-2 col-md-4 col-sm-4 col-6">
+                            <img src="/theme_college/static/src/images/partner/logo1.jpg"/>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+    </template>
+    <template id="college_location" name="College Location">
+        <section class="college_location text-center">
+            <h1>
+                COLLEGE
+                <span>LOCATIONS</span>
+            </h1>
+            <div class="container pt-5 pb-5">
+                <div class="row">
+                    <div class=" col-lg-2 col-md-4 col-6">
+                        <div class="favourites">
+                            <a href="/location_1">
+                                <img src="/theme_college/static/src/images/location/california.jpg"/>
+                            </a>
+                            <h5>
+                                California
+                            </h5>
+                        </div>
+                    </div>
+                    <div class=" col-lg-2 col-md-4 col-6">
+                        <div class="favourites">
+                            <a href="/location_2">
+                                <img src="/theme_college/static/src/images/location/india.jpg"/>
+                            </a>
+                            <h5>
+                                India
+                            </h5>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-4 col-6">
+                        <div class="favourites">
+                            <a href="/location_3">
+                                <img src="/theme_college/static/src/images/location/france.jpg"/>
+                            </a>
+                            <h5>
+                                France
+                            </h5>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-4 col-6">
+                        <div class="favourites">
+                            <a href="/location_4">
+                                <img src="/theme_college/static/src/images/location/england.jpg"/>
+                            </a>
+                            <h5>
+                                England
+                            </h5>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-4 col-6">
+                        <div class="favourites">
+                            <a href="/location_5">
+                                <img src="/theme_college/static/src/images/location/scotland.jpg"/>
+                            </a>
+                            <h5>
+                                Scotland
+                            </h5>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-4 col-6">
+                        <div class="favourites">
+                            <a href="/location_6">
+                                <img src="/theme_college/static/src/images/location/australia.jpg"/>
+                            </a>
+                            <h5>
+                                Australia
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+
+    <template id="home_college_banner" name="College Banner">
+        <section class="banner">
+            <div id="carouselExampleIndicators" class="carousel slide"
+                 data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#carouselExampleIndicators"
+                        data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselExampleIndicators"
+                        data-slide-to="1"></li>
+                    <li data-target="#carouselExampleIndicators"
+                        data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="banner-1">
+                            <div class="card text-center">
+
+                                <div class="card-body">
+                                    <h5 class="card-title">Study Efficient
+                                        <br/>
+                                        <span>Make more.</span>
+                                    </h5>
+                                    <p class="card-text">Knowledge
+                                    </p>
+                                    <a href="#" class="btn btn-primary">
+                                        Learn More
+                                    </a>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="banner-2">
+                            <div class="card text-center">
+
+                                <div class="card-body">
+                                    <h5 class="card-title">Campus Life
+                                        <br/>
+                                        <span>New Home</span>
+                                    </h5>
+                                    <p class="card-text">Something More
+                                    </p>
+                                    <a href="#" class="btn btn-primary">
+                                        Learn More
+                                    </a>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="banner-3">
+                            <div class="card text-center">
+
+                                <div class="card-body">
+                                    <h5 class="card-title">Study Efficient
+                                        <br/>
+                                        <span>Make more.</span>
+                                    </h5>
+                                    <p class="card-text">Knowledge
+                                    </p>
+                                    <a href="#" class="btn btn-primary">
+                                        Learn More
+                                    </a>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a class="carousel-control-prev"
+                   href="#carouselExampleIndicators" role="button"
+                   data-slide="prev">
+                    <span class="carousel-control-prev-icon"
+                          aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next"
+                   href="#carouselExampleIndicators" role="button"
+                   data-slide="next">
+                    <span class="carousel-control-next-icon"
+                          aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </section>
+    </template>
+</odoo>

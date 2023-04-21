@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates xml:space="preserve">
+    <div t-name="hr_leave_dashboard.TimeOffEmpCard" owl="1" class="o_timeoff_card py-3 text-odoo">
+
+        <t t-set="id" t-value="props.id"/>
+        <t t-set="name" t-value="props.name"/>
+        <t t-set="work_email" t-value="props.work_email"/>
+        <t t-set="work_phone" t-value="props.work_phone"/>
+        <t t-set="department_id" t-value="props.department_id"/>
+        <t t-set="resource_calendar_id" t-value="props.resource_calendar_id"/>
+        <t t-set="company" t-value="props.company"/>
+        <t t-set="job_position" t-value="props.job_position"/>
+        <t t-set="child_ids" t-value="props.child_ids"/>
+        <t t-set="child_count" t-value="props.child_count"/>
+        <t t-set="image" t-value="props.image_1920"/>
+
+        <span class="o_timeoff_duration">
+            <t t-esc="name"/>
+        </span>
+        <div class="text-uppercase">
+            <t t-if="job_position" name="duration_unit">Job Position: <t t-esc="job_position"/></t>
+        </div>
+        <div>
+            <t t-if="resource_calendar_id" name="duration_unit">Working Hours: <t t-esc="resource_calendar_id"/></t>
+        </div>
+        <div>
+            <t t-if="work_email" name="duration_unit">EMAIL: <t t-esc="work_email"/></t>
+        </div>
+        <div>
+            <t t-if="work_phone" name="duration_unit">PHONE: <t t-esc="work_phone"/></t>
+        </div>
+        <div class="text-uppercase">
+            <t t-if="department_id" name="duration_unit">Department: <t t-esc="department_id"/></t>
+        </div>
+        <div class="text-uppercase">
+            <t t-if="company" name="duration_unit">Company: <t t-esc="company"/></t>
+        </div>
+        <div>
+          <t t-if="image">
+              <img style="width: 150px; height: 150px;" t-attf-src="data:image/png;base64,{{image}}"/>
+          </t>
+        </div>
+    </div>
+</templates>

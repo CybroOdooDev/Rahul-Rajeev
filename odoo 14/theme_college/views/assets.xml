@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <template id="theme_college_assets" inherit_id="web.assets_frontend">
+            <xpath expr="//link[last()]" position="after">
+                <link rel="stylesheet" type="text/css"
+                      href="/theme_college/static/src/css/style.css"/>
+            </xpath>
+        </template>
+
+    </data>
+</odoo>

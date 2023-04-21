@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates xml:space="preserve">
+    <div t-name="hr_leave_dashboard.EmpDepartmentCard" owl="1" class="o_timeoff_card py-3 text-odoo">
+
+        <t t-set="id" t-value="props.id"/>
+        <t t-set="department_id" t-value="props.department_id"/>
+        <t t-set="emp_count" t-value="0"/>
+        <t t-set="child_count" t-value="props.child_all_count"/>
+        <t t-set="children" t-value="props.children"/>
+        <t t-set="absentees" t-value="props.absentees"/>
+        <t t-set="shift" t-value="props.current_shift"/>
+        <t t-set="upcoming_holidays" t-value="props.upcoming_holidays"/>
+<!--        <t t-log="props"/>-->
+
+
+        <span class="o_timeoff_duration">
+            <t t-esc="department_id"/>
+        </span>
+        <div class="text-uppercase">
+            <t t-if="shift" name="duration_unit">Current Shift: <t t-esc="shift"/></t>
+        </div>
+
+        <div t-if="upcoming_holidays">
+            <div class="text-success">Upcoming Holidays</div>
+            <t t-foreach="upcoming_holidays" t-as="holiday" t-key="holiday.id">
+                <div>
+                    <t t-esc="holiday.name"/>
+                </div>
+                <div>
+                    (<t t-esc="holiday.date_from"/>)
+                    <!--                    to <t t-esc="holiday.date_to"/>-->
+                </div>
+            </t>
+        </div>
+        <div t-if="absentees">
+            <div class="text-danger">On Leave</div>
+            <t t-foreach="absentees" t-as="child" t-key="child.employee_id">
+                <div>
+                    <t t-esc="child.name"/>
+                </div>
+            </t>
+        </div>
+            </div>
+</templates>

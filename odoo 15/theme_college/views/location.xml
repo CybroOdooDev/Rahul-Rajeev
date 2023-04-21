@@ -1,0 +1,774 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<odoo>
+
+    <template id="theme_college.location_1" name="College Location">
+        <style>
+            .home_header{
+            display: none;
+            }
+        </style>
+        <t t-call="website.layout">
+            <div class="container-fluid">
+                <div class="container">
+                    <div class="location">
+                        <div class="container">
+                            <h3 class="tittle">California</h3>
+                            <div class="course-grids">
+                                <h4>In pulvinar lectus</h4>
+                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Suspendisse et
+                                    justo. Praesent mattis commodo augue. Aliquam ornare hendrerit augue. Cras
+                                    tellus. In pulvinar lectus a est. Curabitur eget orciLorem ipsum dolor sit
+                                    amet, consectetuer adipiscing elit. Suspendisse et justo. Praesent mattis
+                                    commodo augue. Aliquam ornare hendrerit augue. Cras tellus. In pulvinar
+                                    lectus a est. Curabitur eget orci..
+                                </p>
+                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Suspendisse et
+                                    justo. Praesent mattis commodo augue. Aliquam ornare hendrerit augue. Cras
+                                    tellus. In pulvinar lectus a est. Curabitur eget orci.
+                                </p>
+                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Suspendisse et
+                                    justo. Praesent mattis commodo augue. Aliquam ornare hendrerit augue. Cras
+                                    tellus. In pulvinar lectus a est. Curabitur eget orci.Lorem ipsum dolor sit
+                                    amet, consectetuer adipiscing elit. Suspendisse et justo. Praesent mattis
+                                    commodo augue. Aliquam ornare hendrerit augue. Cras tellus. In pulvinar
+                                    lectus a est. Curabitur eget orci.Lorem ipsum dolor sit amet, consectetuer
+                                    adipiscing elit. Suspendisse et justo. Praesent mattis commodo augue.
+                                    Aliquam ornare hendrerit augue. Cras tellus. In pulvinar lectus a est.
+                                    Curabitur eget orci.
+                                </p>
+                                <p>Location: 21 Street, San Francisco</p>
+                                <p>Phone: (412)341-8767</p>
+                                <p>Email: sanadmission@gmail.com</p>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="course-grids">
+                                <h4>Programs Available</h4>
+                                <div class="s_three_columns o_mail_snippet_general o_cc o_cc2 pt32 pb32">
+                                    <div class="container">
+                                        <div class="row d-flex align-items-stretch">
+                                            <div class="col-lg-4 s_col_no_bgcolor pt16 pb16">
+                                                <div class="card text-bg-white h-100">
+
+                                                    <img class="card-img-top"
+                                                         src="/theme_college/static/src/images/c1.jpg" alt=""/>
+                                                    <div class="card-body">
+                                                        <h4 class="card-title">Mechanical Engineering</h4>
+                                                        <p class="card-text">Adapt these three columns to fit your
+                                                            design need. To duplicate, delete or move columns, select
+                                                            the column and use the top icons to perform your action.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4 s_col_no_bgcolor pt16 pb16">
+                                                <div class="card text-bg-white h-100">
+                                                    <img class="card-img-top"
+                                                         src="/theme_college/static/src/images/c2.jpg" alt=""/>
+                                                    <div class="card-body">
+                                                        <h4 class="card-title">Information Technology</h4>
+                                                        <p class="card-text">To add a fourth column, reduce the size of
+                                                            these three columns using the right icon of each block.
+                                                            Then, duplicate one of the columns to create a new one as a
+                                                            copy.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4 s_col_no_bgcolor pt16 pb16">
+                                                <div class="card text-bg-white h-100">
+                                                    <img class="card-img-top"
+                                                         src="/theme_college/static/src/images/c3.jpg" alt=""/>
+                                                    <div class="card-body">
+                                                        <h4 class="card-title">Computer Science</h4>
+                                                        <p class="card-text">Delete the above image or replace it with a
+                                                            picture that illustrates your message. Click on the picture
+                                                            to change its <em>rounded corner</em> style.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="course-grids">
+                                <h4>About Us</h4>
+                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Suspendisse et
+                                    justo. Praesent mattis commodo augue. Aliquam ornare hendrerit augue. Cras
+                                    tellus. In pulvinar lectus a est. Curabitur eget orciLorem ipsum dolor sit
+                                    amet, consectetuer adipiscing elit. Suspendisse et justo. Praesent mattis
+                                    commodo augue. Aliquam ornare hendrerit augue. Cras tellus. In pulvinar
+                                    lectus a est. Curabitur eget orci..
+                                </p>
+                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Suspendisse et
+                                    justo. Praesent mattis commodo augue. Aliquam ornare hendrerit augue. Cras
+                                    tellus. In pulvinar lectus a est. Curabitur eget orci.
+                                </p>
+                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Suspendisse et
+                                    justo. Praesent mattis commodo augue. Aliquam ornare hendrerit augue. Cras
+                                    tellus. In pulvinar lectus a est. Curabitur eget orci.Lorem ipsum dolor sit
+                                    amet, consectetuer adipiscing elit. Suspendisse et justo. Praesent mattis
+                                    commodo augue. Aliquam ornare hendrerit augue. Cras tellus. In pulvinar
+                                    lectus a est. Curabitur eget orci.Lorem ipsum dolor sit amet, consectetuer
+                                    adipiscing elit. Suspendisse et justo. Praesent mattis commodo augue.
+                                    Aliquam ornare hendrerit augue. Cras tellus. In pulvinar lectus a est.
+                                    Curabitur eget orci.
+                                </p>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="course-grids">
+                                <h4>Gallery</h4>
+                                <t t-call="website.s_images_wall"/>
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </t>
+    </template>
+        <template id="theme_college.location_2" name="College Location">
+        <style>
+            .home_header{
+            display: none;
+            }
+        </style>
+        <t t-call="website.layout">
+            <div class="container-fluid">
+                <div class="container">
+                    <div class="location">
+                        <div class="container">
+                            <h3 class="tittle">India</h3>
+                            <div class="course-grids">
+                                <h4>In pulvinar lectus</h4>
+                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Suspendisse et
+                                    justo. Praesent mattis commodo augue. Aliquam ornare hendrerit augue. Cras
+                                    tellus. In pulvinar lectus a est. Curabitur eget orciLorem ipsum dolor sit
+                                    amet, consectetuer adipiscing elit. Suspendisse et justo. Praesent mattis
+                                    commodo augue. Aliquam ornare hendrerit augue. Cras tellus. In pulvinar
+                                    lectus a est. Curabitur eget orci..
+                                </p>
+                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Suspendisse et
+                                    justo. Praesent mattis commodo augue. Aliquam ornare hendrerit augue. Cras
+                                    tellus. In pulvinar lectus a est. Curabitur eget orci.
+                                </p>
+                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Suspendisse et
+                                    justo. Praesent mattis commodo augue. Aliquam ornare hendrerit augue. Cras
+                                    tellus. In pulvinar lectus a est. Curabitur eget orci.Lorem ipsum dolor sit
+                                    amet, consectetuer adipiscing elit. Suspendisse et justo. Praesent mattis
+                                    commodo augue. Aliquam ornare hendrerit augue. Cras tellus. In pulvinar
+                                    lectus a est. Curabitur eget orci.Lorem ipsum dolor sit amet, consectetuer
+                                    adipiscing elit. Suspendisse et justo. Praesent mattis commodo augue.
+                                    Aliquam ornare hendrerit augue. Cras tellus. In pulvinar lectus a est.
+                                    Curabitur eget orci.
+                                </p>
+                                <p>Location: 21 Street, New Delhi</p>
+                                <p>Phone: (412)341-8767</p>
+                                <p>Email: sanadmission@gmail.com</p>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="course-grids">
+                                <h4>Programs Available</h4>
+                                <div class="s_three_columns o_mail_snippet_general o_cc o_cc2 pt32 pb32">
+                                    <div class="container">
+                                        <div class="row d-flex align-items-stretch">
+                                            <div class="col-lg-4 s_col_no_bgcolor pt16 pb16">
+                                                <div class="card text-bg-white h-100">
+
+                                                    <img class="card-img-top"
+                                                         src="/theme_college/static/src/images/c1.jpg" alt=""/>
+                                                    <div class="card-body">
+                                                        <h4 class="card-title">Mechanical Engineering</h4>
+                                                        <p class="card-text">Adapt these three columns to fit your
+                                                            design need. To duplicate, delete or move columns, select
+                                                            the column and use the top icons to perform your action.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4 s_col_no_bgcolor pt16 pb16">
+                                                <div class="card text-bg-white h-100">
+                                                    <img class="card-img-top"
+                                                         src="/theme_college/static/src/images/c2.jpg" alt=""/>
+                                                    <div class="card-body">
+                                                        <h4 class="card-title">Information Technology</h4>
+                                                        <p class="card-text">To add a fourth column, reduce the size of
+                                                            these three columns using the right icon of each block.
+                                                            Then, duplicate one of the columns to create a new one as a
+                                                            copy.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4 s_col_no_bgcolor pt16 pb16">
+                                                <div class="card text-bg-white h-100">
+                                                    <img class="card-img-top"
+                                                         src="/theme_college/static/src/images/c3.jpg" alt=""/>
+                                                    <div class="card-body">
+                                                        <h4 class="card-title">Computer Science</h4>
+                                                        <p class="card-text">Delete the above image or replace it with a
+                                                            picture that illustrates your message. Click on the picture
+                                                            to change its <em>rounded corner</em> style.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="course-grids">
+                                <h4>About Us</h4>
+                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Suspendisse et
+                                    justo. Praesent mattis commodo augue. Aliquam ornare hendrerit augue. Cras
+                                    tellus. In pulvinar lectus a est. Curabitur eget orciLorem ipsum dolor sit
+                                    amet, consectetuer adipiscing elit. Suspendisse et justo. Praesent mattis
+                                    commodo augue. Aliquam ornare hendrerit augue. Cras tellus. In pulvinar
+                                    lectus a est. Curabitur eget orci..
+                                </p>
+                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Suspendisse et
+                                    justo. Praesent mattis commodo augue. Aliquam ornare hendrerit augue. Cras
+                                    tellus. In pulvinar lectus a est. Curabitur eget orci.
+                                </p>
+                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Suspendisse et
+                                    justo. Praesent mattis commodo augue. Aliquam ornare hendrerit augue. Cras
+                                    tellus. In pulvinar lectus a est. Curabitur eget orci.Lorem ipsum dolor sit
+                                    amet, consectetuer adipiscing elit. Suspendisse et justo. Praesent mattis
+                                    commodo augue. Aliquam ornare hendrerit augue. Cras tellus. In pulvinar
+                                    lectus a est. Curabitur eget orci.Lorem ipsum dolor sit amet, consectetuer
+                                    adipiscing elit. Suspendisse et justo. Praesent mattis commodo augue.
+                                    Aliquam ornare hendrerit augue. Cras tellus. In pulvinar lectus a est.
+                                    Curabitur eget orci.
+                                </p>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="course-grids">
+                                <h4>Gallery</h4>
+                                <t t-call="website.s_images_wall"/>
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </t>
+    </template>
+        <template id="theme_college.location_3" name="College Location">
+        <style>
+            .home_header{
+            display: none;
+            }
+        </style>
+        <t t-call="website.layout">
+            <div class="container-fluid">
+                <div class="container">
+                    <div class="location">
+                        <div class="container">
+                            <h3 class="tittle">France</h3>
+                            <div class="course-grids">
+                                <h4>In pulvinar lectus</h4>
+                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Suspendisse et
+                                    justo. Praesent mattis commodo augue. Aliquam ornare hendrerit augue. Cras
+                                    tellus. In pulvinar lectus a est. Curabitur eget orciLorem ipsum dolor sit
+                                    amet, consectetuer adipiscing elit. Suspendisse et justo. Praesent mattis
+                                    commodo augue. Aliquam ornare hendrerit augue. Cras tellus. In pulvinar
+                                    lectus a est. Curabitur eget orci..
+                                </p>
+                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Suspendisse et
+                                    justo. Praesent mattis commodo augue. Aliquam ornare hendrerit augue. Cras
+                                    tellus. In pulvinar lectus a est. Curabitur eget orci.
+                                </p>
+                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Suspendisse et
+                                    justo. Praesent mattis commodo augue. Aliquam ornare hendrerit augue. Cras
+                                    tellus. In pulvinar lectus a est. Curabitur eget orci.Lorem ipsum dolor sit
+                                    amet, consectetuer adipiscing elit. Suspendisse et justo. Praesent mattis
+                                    commodo augue. Aliquam ornare hendrerit augue. Cras tellus. In pulvinar
+                                    lectus a est. Curabitur eget orci.Lorem ipsum dolor sit amet, consectetuer
+                                    adipiscing elit. Suspendisse et justo. Praesent mattis commodo augue.
+                                    Aliquam ornare hendrerit augue. Cras tellus. In pulvinar lectus a est.
+                                    Curabitur eget orci.
+                                </p>
+                                <p>Location: 24 Street, Edward</p>
+                                <p>Phone: (412)341-8767</p>
+                                <p>Email: sanadmission@gmail.com</p>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="course-grids">
+                                <h4>Programs Available</h4>
+                                <div class="s_three_columns o_mail_snippet_general o_cc o_cc2 pt32 pb32">
+                                    <div class="container">
+                                        <div class="row d-flex align-items-stretch">
+                                            <div class="col-lg-4 s_col_no_bgcolor pt16 pb16">
+                                                <div class="card text-bg-white h-100">
+
+                                                    <img class="card-img-top"
+                                                         src="/theme_college/static/src/images/c1.jpg" alt=""/>
+                                                    <div class="card-body">
+                                                        <h4 class="card-title">Mechanical Engineering</h4>
+                                                        <p class="card-text">Adapt these three columns to fit your
+                                                            design need. To duplicate, delete or move columns, select
+                                                            the column and use the top icons to perform your action.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4 s_col_no_bgcolor pt16 pb16">
+                                                <div class="card text-bg-white h-100">
+                                                    <img class="card-img-top"
+                                                         src="/theme_college/static/src/images/c2.jpg" alt=""/>
+                                                    <div class="card-body">
+                                                        <h4 class="card-title">Information Technology</h4>
+                                                        <p class="card-text">To add a fourth column, reduce the size of
+                                                            these three columns using the right icon of each block.
+                                                            Then, duplicate one of the columns to create a new one as a
+                                                            copy.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4 s_col_no_bgcolor pt16 pb16">
+                                                <div class="card text-bg-white h-100">
+                                                    <img class="card-img-top"
+                                                         src="/theme_college/static/src/images/c3.jpg" alt=""/>
+                                                    <div class="card-body">
+                                                        <h4 class="card-title">Computer Science</h4>
+                                                        <p class="card-text">Delete the above image or replace it with a
+                                                            picture that illustrates your message. Click on the picture
+                                                            to change its <em>rounded corner</em> style.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="course-grids">
+                                <h4>About Us</h4>
+                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Suspendisse et
+                                    justo. Praesent mattis commodo augue. Aliquam ornare hendrerit augue. Cras
+                                    tellus. In pulvinar lectus a est. Curabitur eget orciLorem ipsum dolor sit
+                                    amet, consectetuer adipiscing elit. Suspendisse et justo. Praesent mattis
+                                    commodo augue. Aliquam ornare hendrerit augue. Cras tellus. In pulvinar
+                                    lectus a est. Curabitur eget orci..
+                                </p>
+                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Suspendisse et
+                                    justo. Praesent mattis commodo augue. Aliquam ornare hendrerit augue. Cras
+                                    tellus. In pulvinar lectus a est. Curabitur eget orci.
+                                </p>
+                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Suspendisse et
+                                    justo. Praesent mattis commodo augue. Aliquam ornare hendrerit augue. Cras
+                                    tellus. In pulvinar lectus a est. Curabitur eget orci.Lorem ipsum dolor sit
+                                    amet, consectetuer adipiscing elit. Suspendisse et justo. Praesent mattis
+                                    commodo augue. Aliquam ornare hendrerit augue. Cras tellus. In pulvinar
+                                    lectus a est. Curabitur eget orci.Lorem ipsum dolor sit amet, consectetuer
+                                    adipiscing elit. Suspendisse et justo. Praesent mattis commodo augue.
+                                    Aliquam ornare hendrerit augue. Cras tellus. In pulvinar lectus a est.
+                                    Curabitur eget orci.
+                                </p>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="course-grids">
+                                <h4>Gallery</h4>
+                                <t t-call="website.s_images_wall"/>
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </t>
+    </template>
+        <template id="theme_college.location_4" name="College Location">
+        <style>
+            .home_header{
+            display: none;
+            }
+        </style>
+        <t t-call="website.layout">
+            <div class="container-fluid">
+                <div class="container">
+                    <div class="location">
+                        <div class="container">
+                            <h3 class="tittle">England</h3>
+                            <div class="course-grids">
+                                <h4>In pulvinar lectus</h4>
+                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Suspendisse et
+                                    justo. Praesent mattis commodo augue. Aliquam ornare hendrerit augue. Cras
+                                    tellus. In pulvinar lectus a est. Curabitur eget orciLorem ipsum dolor sit
+                                    amet, consectetuer adipiscing elit. Suspendisse et justo. Praesent mattis
+                                    commodo augue. Aliquam ornare hendrerit augue. Cras tellus. In pulvinar
+                                    lectus a est. Curabitur eget orci..
+                                </p>
+                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Suspendisse et
+                                    justo. Praesent mattis commodo augue. Aliquam ornare hendrerit augue. Cras
+                                    tellus. In pulvinar lectus a est. Curabitur eget orci.
+                                </p>
+                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Suspendisse et
+                                    justo. Praesent mattis commodo augue. Aliquam ornare hendrerit augue. Cras
+                                    tellus. In pulvinar lectus a est. Curabitur eget orci.Lorem ipsum dolor sit
+                                    amet, consectetuer adipiscing elit. Suspendisse et justo. Praesent mattis
+                                    commodo augue. Aliquam ornare hendrerit augue. Cras tellus. In pulvinar
+                                    lectus a est. Curabitur eget orci.Lorem ipsum dolor sit amet, consectetuer
+                                    adipiscing elit. Suspendisse et justo. Praesent mattis commodo augue.
+                                    Aliquam ornare hendrerit augue. Cras tellus. In pulvinar lectus a est.
+                                    Curabitur eget orci.
+                                </p>
+                                <p>Location: 11 Street, England</p>
+                                <p>Phone: (412)341-8767</p>
+                                <p>Email: sanadmission@gmail.com</p>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="course-grids">
+                                <h4>Programs Available</h4>
+                                <div class="s_three_columns o_mail_snippet_general o_cc o_cc2 pt32 pb32">
+                                    <div class="container">
+                                        <div class="row d-flex align-items-stretch">
+                                            <div class="col-lg-4 s_col_no_bgcolor pt16 pb16">
+                                                <div class="card text-bg-white h-100">
+
+                                                    <img class="card-img-top"
+                                                         src="/theme_college/static/src/images/c1.jpg" alt=""/>
+                                                    <div class="card-body">
+                                                        <h4 class="card-title">Mechanical Engineering</h4>
+                                                        <p class="card-text">Adapt these three columns to fit your
+                                                            design need. To duplicate, delete or move columns, select
+                                                            the column and use the top icons to perform your action.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4 s_col_no_bgcolor pt16 pb16">
+                                                <div class="card text-bg-white h-100">
+                                                    <img class="card-img-top"
+                                                         src="/theme_college/static/src/images/c2.jpg" alt=""/>
+                                                    <div class="card-body">
+                                                        <h4 class="card-title">Information Technology</h4>
+                                                        <p class="card-text">To add a fourth column, reduce the size of
+                                                            these three columns using the right icon of each block.
+                                                            Then, duplicate one of the columns to create a new one as a
+                                                            copy.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4 s_col_no_bgcolor pt16 pb16">
+                                                <div class="card text-bg-white h-100">
+                                                    <img class="card-img-top"
+                                                         src="/theme_college/static/src/images/c3.jpg" alt=""/>
+                                                    <div class="card-body">
+                                                        <h4 class="card-title">Computer Science</h4>
+                                                        <p class="card-text">Delete the above image or replace it with a
+                                                            picture that illustrates your message. Click on the picture
+                                                            to change its <em>rounded corner</em> style.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="course-grids">
+                                <h4>About Us</h4>
+                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Suspendisse et
+                                    justo. Praesent mattis commodo augue. Aliquam ornare hendrerit augue. Cras
+                                    tellus. In pulvinar lectus a est. Curabitur eget orciLorem ipsum dolor sit
+                                    amet, consectetuer adipiscing elit. Suspendisse et justo. Praesent mattis
+                                    commodo augue. Aliquam ornare hendrerit augue. Cras tellus. In pulvinar
+                                    lectus a est. Curabitur eget orci..
+                                </p>
+                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Suspendisse et
+                                    justo. Praesent mattis commodo augue. Aliquam ornare hendrerit augue. Cras
+                                    tellus. In pulvinar lectus a est. Curabitur eget orci.
+                                </p>
+                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Suspendisse et
+                                    justo. Praesent mattis commodo augue. Aliquam ornare hendrerit augue. Cras
+                                    tellus. In pulvinar lectus a est. Curabitur eget orci.Lorem ipsum dolor sit
+                                    amet, consectetuer adipiscing elit. Suspendisse et justo. Praesent mattis
+                                    commodo augue. Aliquam ornare hendrerit augue. Cras tellus. In pulvinar
+                                    lectus a est. Curabitur eget orci.Lorem ipsum dolor sit amet, consectetuer
+                                    adipiscing elit. Suspendisse et justo. Praesent mattis commodo augue.
+                                    Aliquam ornare hendrerit augue. Cras tellus. In pulvinar lectus a est.
+                                    Curabitur eget orci.
+                                </p>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="course-grids">
+                                <h4>Gallery</h4>
+                                <t t-call="website.s_images_wall"/>
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </t>
+    </template>
+        <template id="theme_college.location_5" name="College Location">
+        <style>
+            .home_header{
+            display: none;
+            }
+        </style>
+        <t t-call="website.layout">
+            <div class="container-fluid">
+                <div class="container">
+                    <div class="location">
+                        <div class="container">
+                            <h3 class="tittle">Scotland</h3>
+                            <div class="course-grids">
+                                <h4>In pulvinar lectus</h4>
+                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Suspendisse et
+                                    justo. Praesent mattis commodo augue. Aliquam ornare hendrerit augue. Cras
+                                    tellus. In pulvinar lectus a est. Curabitur eget orciLorem ipsum dolor sit
+                                    amet, consectetuer adipiscing elit. Suspendisse et justo. Praesent mattis
+                                    commodo augue. Aliquam ornare hendrerit augue. Cras tellus. In pulvinar
+                                    lectus a est. Curabitur eget orci..
+                                </p>
+                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Suspendisse et
+                                    justo. Praesent mattis commodo augue. Aliquam ornare hendrerit augue. Cras
+                                    tellus. In pulvinar lectus a est. Curabitur eget orci.
+                                </p>
+                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Suspendisse et
+                                    justo. Praesent mattis commodo augue. Aliquam ornare hendrerit augue. Cras
+                                    tellus. In pulvinar lectus a est. Curabitur eget orci.Lorem ipsum dolor sit
+                                    amet, consectetuer adipiscing elit. Suspendisse et justo. Praesent mattis
+                                    commodo augue. Aliquam ornare hendrerit augue. Cras tellus. In pulvinar
+                                    lectus a est. Curabitur eget orci.Lorem ipsum dolor sit amet, consectetuer
+                                    adipiscing elit. Suspendisse et justo. Praesent mattis commodo augue.
+                                    Aliquam ornare hendrerit augue. Cras tellus. In pulvinar lectus a est.
+                                    Curabitur eget orci.
+                                </p>
+                                <p>Location: 13 Street, Scotland</p>
+                                <p>Phone: (412)341-8767</p>
+                                <p>Email: sanadmission@gmail.com</p>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="course-grids">
+                                <h4>Programs Available</h4>
+                                <div class="s_three_columns o_mail_snippet_general o_cc o_cc2 pt32 pb32">
+                                    <div class="container">
+                                        <div class="row d-flex align-items-stretch">
+                                            <div class="col-lg-4 s_col_no_bgcolor pt16 pb16">
+                                                <div class="card text-bg-white h-100">
+
+                                                    <img class="card-img-top"
+                                                         src="/theme_college/static/src/images/c1.jpg" alt=""/>
+                                                    <div class="card-body">
+                                                        <h4 class="card-title">Mechanical Engineering</h4>
+                                                        <p class="card-text">Adapt these three columns to fit your
+                                                            design need. To duplicate, delete or move columns, select
+                                                            the column and use the top icons to perform your action.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4 s_col_no_bgcolor pt16 pb16">
+                                                <div class="card text-bg-white h-100">
+                                                    <img class="card-img-top"
+                                                         src="/theme_college/static/src/images/c2.jpg" alt=""/>
+                                                    <div class="card-body">
+                                                        <h4 class="card-title">Information Technology</h4>
+                                                        <p class="card-text">To add a fourth column, reduce the size of
+                                                            these three columns using the right icon of each block.
+                                                            Then, duplicate one of the columns to create a new one as a
+                                                            copy.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4 s_col_no_bgcolor pt16 pb16">
+                                                <div class="card text-bg-white h-100">
+                                                    <img class="card-img-top"
+                                                         src="/theme_college/static/src/images/c3.jpg" alt=""/>
+                                                    <div class="card-body">
+                                                        <h4 class="card-title">Computer Science</h4>
+                                                        <p class="card-text">Delete the above image or replace it with a
+                                                            picture that illustrates your message. Click on the picture
+                                                            to change its <em>rounded corner</em> style.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="course-grids">
+                                <h4>About Us</h4>
+                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Suspendisse et
+                                    justo. Praesent mattis commodo augue. Aliquam ornare hendrerit augue. Cras
+                                    tellus. In pulvinar lectus a est. Curabitur eget orciLorem ipsum dolor sit
+                                    amet, consectetuer adipiscing elit. Suspendisse et justo. Praesent mattis
+                                    commodo augue. Aliquam ornare hendrerit augue. Cras tellus. In pulvinar
+                                    lectus a est. Curabitur eget orci..
+                                </p>
+                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Suspendisse et
+                                    justo. Praesent mattis commodo augue. Aliquam ornare hendrerit augue. Cras
+                                    tellus. In pulvinar lectus a est. Curabitur eget orci.
+                                </p>
+                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Suspendisse et
+                                    justo. Praesent mattis commodo augue. Aliquam ornare hendrerit augue. Cras
+                                    tellus. In pulvinar lectus a est. Curabitur eget orci.Lorem ipsum dolor sit
+                                    amet, consectetuer adipiscing elit. Suspendisse et justo. Praesent mattis
+                                    commodo augue. Aliquam ornare hendrerit augue. Cras tellus. In pulvinar
+                                    lectus a est. Curabitur eget orci.Lorem ipsum dolor sit amet, consectetuer
+                                    adipiscing elit. Suspendisse et justo. Praesent mattis commodo augue.
+                                    Aliquam ornare hendrerit augue. Cras tellus. In pulvinar lectus a est.
+                                    Curabitur eget orci.
+                                </p>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="course-grids">
+                                <h4>Gallery</h4>
+                                <t t-call="website.s_images_wall"/>
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </t>
+    </template>
+        <template id="theme_college.location_6" name="College Location">
+        <style>
+            .home_header{
+            display: none;
+            }
+        </style>
+        <t t-call="website.layout">
+            <div class="container-fluid">
+                <div class="container">
+                    <div class="location">
+                        <div class="container">
+                            <h3 class="tittle">Australia</h3>
+                            <div class="course-grids">
+                                <h4>In pulvinar lectus</h4>
+                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Suspendisse et
+                                    justo. Praesent mattis commodo augue. Aliquam ornare hendrerit augue. Cras
+                                    tellus. In pulvinar lectus a est. Curabitur eget orciLorem ipsum dolor sit
+                                    amet, consectetuer adipiscing elit. Suspendisse et justo. Praesent mattis
+                                    commodo augue. Aliquam ornare hendrerit augue. Cras tellus. In pulvinar
+                                    lectus a est. Curabitur eget orci..
+                                </p>
+                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Suspendisse et
+                                    justo. Praesent mattis commodo augue. Aliquam ornare hendrerit augue. Cras
+                                    tellus. In pulvinar lectus a est. Curabitur eget orci.
+                                </p>
+                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Suspendisse et
+                                    justo. Praesent mattis commodo augue. Aliquam ornare hendrerit augue. Cras
+                                    tellus. In pulvinar lectus a est. Curabitur eget orci.Lorem ipsum dolor sit
+                                    amet, consectetuer adipiscing elit. Suspendisse et justo. Praesent mattis
+                                    commodo augue. Aliquam ornare hendrerit augue. Cras tellus. In pulvinar
+                                    lectus a est. Curabitur eget orci.Lorem ipsum dolor sit amet, consectetuer
+                                    adipiscing elit. Suspendisse et justo. Praesent mattis commodo augue.
+                                    Aliquam ornare hendrerit augue. Cras tellus. In pulvinar lectus a est.
+                                    Curabitur eget orci.
+                                </p>
+                                <p>Location: 21 Street, Australia</p>
+                                <p>Phone: (412)341-8767</p>
+                                <p>Email: sanadmission@gmail.com</p>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="course-grids">
+                                <h4>Programs Available</h4>
+                                <div class="s_three_columns o_mail_snippet_general o_cc o_cc2 pt32 pb32">
+                                    <div class="container">
+                                        <div class="row d-flex align-items-stretch">
+                                            <div class="col-lg-4 s_col_no_bgcolor pt16 pb16">
+                                                <div class="card text-bg-white h-100">
+
+                                                    <img class="card-img-top"
+                                                         src="/theme_college/static/src/images/c1.jpg" alt=""/>
+                                                    <div class="card-body">
+                                                        <h4 class="card-title">Mechanical Engineering</h4>
+                                                        <p class="card-text">Adapt these three columns to fit your
+                                                            design need. To duplicate, delete or move columns, select
+                                                            the column and use the top icons to perform your action.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4 s_col_no_bgcolor pt16 pb16">
+                                                <div class="card text-bg-white h-100">
+                                                    <img class="card-img-top"
+                                                         src="/theme_college/static/src/images/c2.jpg" alt=""/>
+                                                    <div class="card-body">
+                                                        <h4 class="card-title">Information Technology</h4>
+                                                        <p class="card-text">To add a fourth column, reduce the size of
+                                                            these three columns using the right icon of each block.
+                                                            Then, duplicate one of the columns to create a new one as a
+                                                            copy.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4 s_col_no_bgcolor pt16 pb16">
+                                                <div class="card text-bg-white h-100">
+                                                    <img class="card-img-top"
+                                                         src="/theme_college/static/src/images/c3.jpg" alt=""/>
+                                                    <div class="card-body">
+                                                        <h4 class="card-title">Computer Science</h4>
+                                                        <p class="card-text">Delete the above image or replace it with a
+                                                            picture that illustrates your message. Click on the picture
+                                                            to change its <em>rounded corner</em> style.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="course-grids">
+                                <h4>About Us</h4>
+                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Suspendisse et
+                                    justo. Praesent mattis commodo augue. Aliquam ornare hendrerit augue. Cras
+                                    tellus. In pulvinar lectus a est. Curabitur eget orciLorem ipsum dolor sit
+                                    amet, consectetuer adipiscing elit. Suspendisse et justo. Praesent mattis
+                                    commodo augue. Aliquam ornare hendrerit augue. Cras tellus. In pulvinar
+                                    lectus a est. Curabitur eget orci..
+                                </p>
+                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Suspendisse et
+                                    justo. Praesent mattis commodo augue. Aliquam ornare hendrerit augue. Cras
+                                    tellus. In pulvinar lectus a est. Curabitur eget orci.
+                                </p>
+                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Suspendisse et
+                                    justo. Praesent mattis commodo augue. Aliquam ornare hendrerit augue. Cras
+                                    tellus. In pulvinar lectus a est. Curabitur eget orci.Lorem ipsum dolor sit
+                                    amet, consectetuer adipiscing elit. Suspendisse et justo. Praesent mattis
+                                    commodo augue. Aliquam ornare hendrerit augue. Cras tellus. In pulvinar
+                                    lectus a est. Curabitur eget orci.Lorem ipsum dolor sit amet, consectetuer
+                                    adipiscing elit. Suspendisse et justo. Praesent mattis commodo augue.
+                                    Aliquam ornare hendrerit augue. Cras tellus. In pulvinar lectus a est.
+                                    Curabitur eget orci.
+                                </p>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="course-grids">
+                                <h4>Gallery</h4>
+                                <t t-call="website.s_images_wall"/>
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </t>
+    </template>
+
+</odoo>
