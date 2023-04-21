@@ -6,6 +6,7 @@ import { TimeOffCard } from '@hr_holidays/dashboard/time_off_card';
 import { TimeOffEmpCard } from './time_off_emp_card';
 import { TimeOffEmpOrgChart } from './emp_org_chart';
 import { EmpDepartmentCard } from './time_off_emp_card';
+import { ApprovalStatusCard } from './time_off_emp_card';
 
 //console.log("***********", TimeOffCard)
 import { useBus, useService } from "@web/core/utils/hooks";
@@ -60,6 +61,14 @@ patch(TimeOffDashboard.prototype, 'hr_holidays.TimeOffDashboard',{
                 context: context
             }
         );
+        this.approval_status_count = await this.orm.call(
+            'hr.leave',
+            'get_approval_status_count',
+            [],
+            {
+                context: context
+            }
+        );
         if (this.props.employeeId == null) {
             this.props.employeeId = this.current_employee.id;
         }
@@ -68,6 +77,6 @@ patch(TimeOffDashboard.prototype, 'hr_holidays.TimeOffDashboard',{
 });
 
 
-TimeOffDashboard.components = { TimeOffCard, TimeOffEmpCard ,TimeOffEmpOrgChart, EmpDepartmentCard};
+TimeOffDashboard.components = { TimeOffCard, TimeOffEmpCard ,TimeOffEmpOrgChart, EmpDepartmentCard, ApprovalStatusCard};
 TimeOffDashboard.template = 'hr_holidays.TimeOffDashboard';
 TimeOffDashboard.props = ['employeeId'];

@@ -33,7 +33,7 @@ class HrEmployee(models.Model):
         # all_days = []
 
         self = self or self.env.user.employee_id
-        print(start_date, end_date)
+        # print(start_date, end_date)
 
         public_holidays = self._get_public_holidays(start_date, end_date)
         for holiday in public_holidays:
@@ -43,7 +43,7 @@ class HrEmployee(models.Model):
             for d in range(num_days + 1):
                 # all_days.append(str(holiday.date_from.date()))
                 all_days[str(holiday.date_from.date())] = d
-        print('all_daysss', all_days)
+        # print('all_daysss', all_days)
 
         return all_days
 
@@ -55,7 +55,7 @@ class HrEmployee(models.Model):
             ('resource_id', '=', False),
             ('company_id', 'in', self.env.companies.ids),
         ])
-        print('sssssstrr', public_holidays)
+        # print('sssssstrr', public_holidays)
 
         # # a user with hr_holidays permissions will be able to see all stress days from his calendar
         # is_leave_user = self == self.env.user.employee_id and self.user_has_groups('hr_holidays.group_hr_holidays_user')

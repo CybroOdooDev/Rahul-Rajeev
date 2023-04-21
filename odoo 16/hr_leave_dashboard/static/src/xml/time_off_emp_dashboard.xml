@@ -24,6 +24,9 @@
                                absentees="absentees"
                                current_shift="current_shift"
                                upcoming_holidays="upcoming_holidays"/>
+            <ApprovalStatusCard id="current_employee.id"
+                                name="current_employee.name"
+                                approval_status_count="approval_status_count"/>
 
         </xpath>
     </div>

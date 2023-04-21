@@ -1,6 +1,7 @@
 /* @odoo-module */
 
 //import Popover from "web.Popover";
+import session from 'web.session';
 
 const { Component } = owl;
 
@@ -21,3 +22,23 @@ export class EmpDepartmentCard extends Component {}
 //EmpDepartmentCard.components = { Popover };
 EmpDepartmentCard.template = 'hr_leave_dashboard.EmpDepartmentCard';
 EmpDepartmentCard.props = ['name', 'id', 'department_id', 'child_all_count', 'children', 'absentees', 'current_shift', 'upcoming_holidays'];
+//var x='hr_leave_dashboard.EmpDepartmentCard'
+export class ApprovalStatusCard extends Component {
+        setup() {
+        this.props;
+
+        session.user_has_group('hr_holidays.group_hr_holidays_manager').then(hasGroup => {
+            this.manager = hasGroup;
+            console.log('xcxc',this.manager)
+//            if(this.manager == true){
+//                 console.log('managerrrrr',this.manager)
+//                  ApprovalStatusCard.template = 'hr_leave_dashboard.ApprovalStatusCard';
+//                }
+        });
+        console.log('thisssssss', this)
+
+    }
+}
+//ApprovalStatusCard.template = x;
+ApprovalStatusCard.template = 'hr_leave_dashboard.ApprovalStatusCard';
+ApprovalStatusCard.props = ['id','name','approval_status_count'];

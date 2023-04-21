@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates xml:space="preserve">
+    <div t-name="hr_leave_dashboard.ApprovalStatusCard" owl="1" class="o_timeoff_card py-3 text-odoo">
+
+        <t t-set="approval_status_count" t-value="props.approval_status_count"/>
+
+<!--        <t t-if="approval_status_count.validate_count > 0">-->
+        <span class="o_timeoff_duration">
+            <t t-esc="approval_status_count.validate_count"/>
+        </span>
+        <div class="text-uppercase">
+            <span>Approved</span>
+        </div>
+<!--        </t>-->
+
+<!--        <t t-if="approval_status_count.confirm_count > 0">-->
+        <span class="o_timeoff_duration">
+            <t t-esc="approval_status_count.confirm_count"/>
+        </span>
+        <div class="text-uppercase">
+            <span>To Approve</span>
+        </div>
+<!--        </t>-->
+
+<!--        <t t-if="approval_status_count.refuse_count > 0">-->
+        <span class="o_timeoff_duration">
+            <t t-esc="approval_status_count.refuse_count"/>
+        </span>
+        <div class="text-uppercase">
+            <span>Refused</span>
+        </div>
+<!--        </t>-->
+
+<!--    </div>-->
+    </div>
+</templates>

@@ -45,6 +45,7 @@
             'hr_leave_dashboard/static/src/js/time_off_emp_card.js',
             'hr_leave_dashboard/static/src/js/emp_department_card.js',
             'hr_leave_dashboard/static/src/js/time_off_emp_dashboard.js',
+            'hr_leave_dashboard/static/src/xml/approval_satus_card.xml',
             'hr_leave_dashboard/static/src/xml/time_off_emp_dashboard.xml',
             'hr_leave_dashboard/static/src/xml/emp_org_chart.xml',
             'hr_leave_dashboard/static/src/xml/emp_department_card.xml',

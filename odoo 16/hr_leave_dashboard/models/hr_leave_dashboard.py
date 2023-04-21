@@ -63,8 +63,7 @@ class HRLeave(models.Model):
                 current_employee.parent_id) else {},
             'manager_all_count': len(current_employee.parent_id.ids),
             'children': [self._prepare_employee_data(child) for child in current_employee.child_ids if
-                         child != current_employee]
-
+                         child != current_employee],
         }
         return current_employee_details
 
@@ -99,7 +98,7 @@ class HRLeave(models.Model):
     @api.model
     def get_current_shift(self):
         current_employee = self.env.user.employee_ids
-        print('current_employee', current_employee)
+        # print('current_employee', current_employee)
         employee_tz = current_employee.tz or self.env.context.get('tz')
         employee_pytz = pytz.timezone(employee_tz) if employee_tz else pytz.utc
         employee_datetime = datetime.datetime.now().astimezone(employee_pytz)
@@ -146,7 +145,22 @@ class HRLeave(models.Model):
         for holiday in holidays:
             if employee_datetime.date() < holiday.get('date_to').date():
                 upcoming_holidays.append(holiday)
-        print(upcoming_holidays)
+        # print(upcoming_holidays)
         return upcoming_holidays
 
+    @api.model
+    def get_approval_status_count(self):
+        current_employee = self.env.user.employee_ids
+        validate_count = len(self.env['hr.leave'].search([('employee_id', '=', current_employee.id),
+                                                          ('state', '=', 'validate')]))
+        confirm_count = len(self.env['hr.leave'].search([('employee_id', '=', current_employee.id),
+                                                         ('state', '=', 'confirm')]))
+        refuse_count = len(self.env['hr.leave'].search([('employee_id', '=', current_employee.id),
+                                                        ('state', '=', 'refuse')]))
 
+        approval_status_count = {
+            'validate_count': validate_count,
+            'confirm_count': confirm_count,
+            'refuse_count': refuse_count
+        }
+        return approval_status_count
