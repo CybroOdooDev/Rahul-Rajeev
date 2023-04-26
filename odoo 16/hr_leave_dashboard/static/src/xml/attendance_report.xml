@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <t t-name="HRAttendance">
+        <div class="oh_dashboard">
+            <div class="container-fluid my-5 o_hr_dashboard"/>
+        </div>
+    </t>
+</odoo>

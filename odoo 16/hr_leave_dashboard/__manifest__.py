@@ -32,19 +32,27 @@
     'website': "https://www.cybrosys.com",
     'depends': ['base', 'hr_holidays', 'hr_org_chart'],
     'data': [
-        # 'views/calendar_dashboard.xml',
+
+        'reports/report.xml',
+        'reports/template.xml',
+
+        'views/hr_leave_type.xml',
+        'views/views.xml',
     ],
     'assets': {
         'web.assets_backend': [
 
-
+            'hr_leave_dashboard/static/src/xml/approval_satus_card.xml',
             'hr_leave_dashboard/static/src/js/calendar_model.js',
+            'hr_leave_dashboard/static/src/js/attendance_report.js',
             'hr_leave_dashboard/static/src/js/calendar_year_renderer.js',
             'hr_leave_dashboard/static/src/js/hooks.js',
             'hr_leave_dashboard/static/src/js/emp_org_chart.js',
             'hr_leave_dashboard/static/src/js/time_off_emp_card.js',
+            'hr_leave_dashboard/static/src/js/time_off_emp_org_chart.js',
             'hr_leave_dashboard/static/src/js/emp_department_card.js',
             'hr_leave_dashboard/static/src/js/time_off_emp_dashboard.js',
+            'hr_leave_dashboard/static/src/xml/attendance_report.xml',
             'hr_leave_dashboard/static/src/xml/approval_satus_card.xml',
             'hr_leave_dashboard/static/src/xml/time_off_emp_dashboard.xml',
             'hr_leave_dashboard/static/src/xml/emp_org_chart.xml',

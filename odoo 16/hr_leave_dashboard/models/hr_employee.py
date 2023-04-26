@@ -33,8 +33,6 @@ class HrEmployee(models.Model):
         # all_days = []
 
         self = self or self.env.user.employee_id
-        # print(start_date, end_date)
-
         public_holidays = self._get_public_holidays(start_date, end_date)
         for holiday in public_holidays:
 
@@ -48,7 +46,6 @@ class HrEmployee(models.Model):
         return all_days
 
     def _get_public_holidays(self, start_date, end_date):
-        print(start_date, end_date)
         public_holidays = self.env['resource.calendar.leaves'].search([
             ('date_from', '<=', end_date),
             ('date_to', '>=', start_date),

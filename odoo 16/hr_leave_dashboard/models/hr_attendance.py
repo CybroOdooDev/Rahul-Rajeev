@@ -19,4 +19,10 @@
 #    If not, see <http://www.gnu.org/licenses/>.
 #
 #############################################################################
-from . import hr_leave, hr_employee, hr_leave_type, hr_leave_report
+from odoo import models, fields, api
+
+
+class HrAttendance(models.Model):
+    _inherit = 'hr.attendance'
+
+    print('xxxxxx')

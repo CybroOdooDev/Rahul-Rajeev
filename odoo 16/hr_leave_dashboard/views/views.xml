@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="action_hr_attendance" model="ir.actions.client">
+          <field name="name">Attendance</field>
+          <field name="tag">attendance_report</field>
+    </record>
+    <menuitem id="hr_holidays_attendance"
+        name="Attendance"
+        parent="hr_holidays.menu_hr_holidays_root"
+        sequence="23"
+        action="action_hr_attendance"/>
+</odoo>

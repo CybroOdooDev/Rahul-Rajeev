@@ -14,6 +14,8 @@
                             children="current_employee.children"/>
             <TimeOffEmpOrgChart name="current_employee.name"
                             id="current_employee.id"
+                            job_id="current_employee.job_id"
+                                manager="manager"
                             manager_all_count="current_employee.manager_all_count"
                             child_all_count="current_employee.child_all_count"/>
             <EmpDepartmentCard name="current_employee.name"
@@ -24,8 +26,12 @@
                                absentees="absentees"
                                current_shift="current_shift"
                                upcoming_holidays="upcoming_holidays"/>
+<!--        </xpath>-->
+<!--        <xpath expr="//div[hasclass('o_timeoff_dashboard')]" position="after">-->
             <ApprovalStatusCard id="current_employee.id"
                                 name="current_employee.name"
+                                child_ids="current_employee.child_ids"
+                                children="current_employee.children"
                                 approval_status_count="approval_status_count"/>
 
         </xpath>

@@ -23,3 +23,6 @@ td.fc-day.fc-widget-content.fc-sat{
 td.fc-day.fc-widget-content.fc-sun{
     background-color:red !important;
 }
+.holidaay{
+display :none !important;
+}

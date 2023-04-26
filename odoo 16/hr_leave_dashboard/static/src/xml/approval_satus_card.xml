@@ -1,36 +1,66 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <templates xml:space="preserve">
-    <div t-name="hr_leave_dashboard.ApprovalStatusCard" owl="1" class="o_timeoff_card py-3 text-odoo">
+    <div t-name="hr_leave_dashboard.ApprovalStatusCard" owl='1'
+         class="o_timeoff_card approval_status_card py-3 text-odoo">
 
-        <t t-set="approval_status_count" t-value="props.approval_status_count"/>
+                <t t-set="approval_status_count" t-value="props.approval_status_count"/>
+        <t t-set="children" t-value="props.children"/>
 
-<!--        <t t-if="approval_status_count.validate_count > 0">-->
-        <span class="o_timeoff_duration">
+        <t t-if="!manager">
+                <div class="hr_holiday_user">
+
+                    <t t-log="props"/>
+                    <t t-log="manager"/>
+                    <span class="o_timeoff_duration">
             <t t-esc="approval_status_count.validate_count"/>
         </span>
-        <div class="text-uppercase">
+                    <div class="text-uppercase">
             <span>Approved</span>
         </div>
-<!--        </t>-->
-
-<!--        <t t-if="approval_status_count.confirm_count > 0">-->
-        <span class="o_timeoff_duration">
+                    <span class="o_timeoff_duration">
             <t t-esc="approval_status_count.confirm_count"/>
         </span>
-        <div class="text-uppercase">
+                    <div class="text-uppercase">
             <span>To Approve</span>
         </div>
-<!--        </t>-->
-
-<!--        <t t-if="approval_status_count.refuse_count > 0">-->
-        <span class="o_timeoff_duration">
+                    <span class="o_timeoff_duration">
             <t t-esc="approval_status_count.refuse_count"/>
         </span>
-        <div class="text-uppercase">
+                    <div class="text-uppercase">
             <span>Refused</span>
         </div>
-<!--        </t>-->
+    </div>
+                </t>
+        <t t-else="">
+            <div class="hr_holiday_manager">
+                 <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Approved</th>
+                                    <th>To Approve</th>
+                                    <th>Refused</th>
+                                </tr>
+                            </thead>
+                     <tbody>
+                                <t t-foreach="children" t-as="child" t-key="child.id">
+                                    <tr>
+                                        <td><t t-esc="child.name"/></td>
+                                        <td><t t-esc="child.approval_status_count.validate_count"/></td>
+                                        <td><t t-esc="child.approval_status_count.confirm_count"/></td>
+                                        <td><t t-esc="child.approval_status_count.refuse_count"/></td>
+                                    </tr>
+                                </t>
+                            </tbody>
+                        </table>
+                <select id="duration">
+                    <option value="none">--select an option--</option>
+                    <option value="this_month">This month</option>
+                    <option value="last_month">Last month</option>
+                </select>
+                <button t-on-click="printPdfReport" type="button" class="btn btn-primary">Print PDF</button>
+            </div>
 
-<!--    </div>-->
+        </t>
     </div>
 </templates>

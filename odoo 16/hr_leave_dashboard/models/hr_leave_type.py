@@ -19,4 +19,21 @@
 #    If not, see <http://www.gnu.org/licenses/>.
 #
 #############################################################################
-from . import hr_leave, hr_employee, hr_leave_type, hr_leave_report
+from odoo import models, fields
+
+
+class HRLeaveType(models.Model):
+    _inherit = 'hr.leave.type'
+    _description = 'Inheriting Time Off Module'
+
+    leave_code = fields.Selection([('UL', 'UL'),
+                                   ('SL', 'SL'),
+                                   ('RL', 'RL'),
+                                   ('NL', 'NL'),
+                                   ('ML', 'ML'),
+                                   ('FL', 'FL'),
+                                   ('CL', 'CL'),
+                                   ('PL', 'PL'),
+                                   ('OL', 'OL'),
+                                   ], string='Leave Code', required=True)
+    leave_color = fields.Integer(string="Leave Color")

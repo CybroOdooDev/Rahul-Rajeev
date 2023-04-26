@@ -9,6 +9,7 @@ import { EmpDepartmentCard } from './time_off_emp_card';
 import { ApprovalStatusCard } from './time_off_emp_card';
 
 //console.log("***********", TimeOffCard)
+import session from 'web.session';
 import { useBus, useService } from "@web/core/utils/hooks";
 
 const { Component, useState, onWillStart } = owl;
@@ -20,6 +21,9 @@ patch(TimeOffDashboard.prototype, 'hr_holidays.TimeOffDashboard',{
         if (this.props.employeeId !== null) {
             context['employee_id'] = this.props.employeeId;
         }
+        session.user_has_group('hr_holidays.group_hr_holidays_manager').then(hasGroup => {
+            this.manager = hasGroup;
+        });
 
         this.state.holidays = await this.orm.call(
             'hr.leave.type',
@@ -64,7 +68,7 @@ patch(TimeOffDashboard.prototype, 'hr_holidays.TimeOffDashboard',{
         this.approval_status_count = await this.orm.call(
             'hr.leave',
             'get_approval_status_count',
-            [],
+            [this.current_employee.id],
             {
                 context: context
             }
@@ -72,7 +76,10 @@ patch(TimeOffDashboard.prototype, 'hr_holidays.TimeOffDashboard',{
         if (this.props.employeeId == null) {
             this.props.employeeId = this.current_employee.id;
         }
-//        console.log('popooooooooooooooooooooopopop', this)
+
+        console.log('popooooooooooooooooooooopopop', this)
+
+
     }
 });
 

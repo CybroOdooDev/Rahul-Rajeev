@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <template id="hr_leave_report">
+        <t t-call="web.html_container">
+                <t t-call="web.external_layout">
+                    <div class="page">
+                        <div class="oe_structure">
+                            <div class="text-center">
+                                <h1>Leave Report</h1>
+                            </div>
+                            <div class="row">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+<!--                                            <th>-->
+<!--                                                <strong>-->
+<!--                                                    Sl.no-->
+<!--                                                </strong>-->
+<!--                                            </th>-->
+                                            <th>
+                                                <strong>
+                                                    Employee Name
+                                                </strong>
+                                            </th>
+                                            <th>
+                                                <strong>
+                                                    Leaves Taken
+                                                </strong>
+                                            </th>
+                                            <th>
+                                                <strong>
+                                                    Leave Type
+                                                </strong>
+                                            </th>
+                                            <th>
+                                                <strong>
+                                                    Remaining Leaves
+                                                </strong>
+                                            </th>
+                                        </tr>
+                                    </thead>
+
+
+
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </t>
+<!--            </t>-->
+        </t>
+    </template>
+</odoo>

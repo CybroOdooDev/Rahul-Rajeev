@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="action_hr_leave_report" model="ir.actions.report">
+        <field name="name">Leave report</field>
+        <field name="model">hr.leave.report</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">hr_leave_dashboard.hr_leave_report</field>
+        <field name="report_file">hr_leave_dashboard.hr_leave_report</field>
+    </record>
+</odoo>

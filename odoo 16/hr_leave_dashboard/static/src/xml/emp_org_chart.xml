@@ -110,6 +110,7 @@
     </t>
 
     <div t-if="child_count" t-attf-class="o_org_chart_group_down position-relative #{manager_count &gt; 0 ? 'o_org_chart_has_managers' : ''}">
+        <t t-if="props.manager">
         <t t-foreach="children" t-as="employee" t-key="employee_index">
             <t t-set="emp_count" t-value="emp_count + 1"/>
             <t t-if="emp_count &lt; 20">
@@ -130,7 +131,21 @@
                 </div>
             </div>
         </t>
+        </t>
+        <t t-else="">
+            <t t-foreach="children" t-as="employee" t-key="employee_index">
+                <t t-if="props.job_id == employee.job_id">
+            <t t-set="emp_count" t-value="emp_count + 1"/>
+            <t t-if="emp_count &lt; 20">
+                <t t-call="hr_leave_dashboard.hr_org_chart_employee">
+                    <t t-set="employee_type" t-value="'sub'"/>
+                </t>
+            </t>
+                    </t>
+        </t>
+        </t>
     </div>
+
 </t>
 
 <t t-name="hr_leave_dashboard.hr_orgchart_emp_popover" owl="1">

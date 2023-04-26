@@ -33,7 +33,9 @@ class HRLeave(models.Model):
         return dict(
             id=employee.id,
             name=employee.name,
-            link='/mail/view?model=%s&res_id=%s' % ('hr.employee.public', employee.id,),
+            job_id=employee.job_id.name,
+            approval_status_count=self.get_approval_status_count(employee.id)
+            # link='/mail/view?model=%s&res_id=%s' % ('hr.employee.public', employee.id,),
             # job_id=employee.job_id.id,
             # job_name=employee.job_id.name or '',
             # # job_title=employee.job_id.name or '',
@@ -48,6 +50,7 @@ class HRLeave(models.Model):
         current_employee_details = {
             'id': current_employee.id,
             'name': current_employee.name,
+            'job_id': current_employee.job_id.id,
             'image_1920': current_employee.image_1920,
             'work_email': current_employee.work_email,
             'work_phone': current_employee.work_phone,
@@ -149,13 +152,12 @@ class HRLeave(models.Model):
         return upcoming_holidays
 
     @api.model
-    def get_approval_status_count(self):
-        current_employee = self.env.user.employee_ids
-        validate_count = len(self.env['hr.leave'].search([('employee_id', '=', current_employee.id),
+    def get_approval_status_count(self, current_employee):
+        validate_count = len(self.env['hr.leave'].search([('employee_id', '=', current_employee),
                                                           ('state', '=', 'validate')]))
-        confirm_count = len(self.env['hr.leave'].search([('employee_id', '=', current_employee.id),
+        confirm_count = len(self.env['hr.leave'].search([('employee_id', '=', current_employee),
                                                          ('state', '=', 'confirm')]))
-        refuse_count = len(self.env['hr.leave'].search([('employee_id', '=', current_employee.id),
+        refuse_count = len(self.env['hr.leave'].search([('employee_id', '=', current_employee),
                                                         ('state', '=', 'refuse')]))
 
         approval_status_count = {
