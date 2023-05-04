@@ -1,11 +1,9 @@
 /** @odoo-module */
 
 import {Field} from '@web/views/fields/field';
-//console.log('filddd', Field)
 import { registry } from "@web/core/registry";
 import { useService } from "@web/core/utils/hooks";
 import { usePopover } from "@web/core/popover/popover_hook";
-//import { onEmployeeSubRedirect } from './hooks';
 
 const { Component, onWillStart, onWillRender, useState } = owl;
 
@@ -33,7 +31,6 @@ class TimeOffEmpOrgChartPopover extends Component {
         this.rpc = useService('rpc');
         this.orm = useService('orm');
         this.actionService = useService("action");
-//        this._onEmployeeSubRedirect = onEmployeeSubRedirect();
     }
 
     /**
@@ -44,7 +41,6 @@ class TimeOffEmpOrgChartPopover extends Component {
      * @returns {Promise} action loaded
      */
     async _onEmployeeRedirect(employeeId) {
-//    console.log('emmmmmmmmmm', employeeId)
         const action = await this.orm.call('hr.employee', 'get_formview_action', [employeeId]);
         this.actionService.doAction(action);
     }
@@ -63,7 +59,6 @@ export class TimeOffEmpOrgChart extends Component {
         this.jsonStringify = JSON.stringify;
 
         this.state = useState({'employee_id': null});
-//        this._onEmployeeSubRedirect = onEmployeeSubRedirect();
 
         onWillStart(this.handleComponentUpdate.bind(this));
         onWillRender(this.handleComponentUpdate.bind(this));
@@ -83,8 +78,6 @@ export class TimeOffEmpOrgChart extends Component {
 
     async fetchEmployeeData(employeeId, force = false) {
     employeeId = this.props.id
-//    console.log('employeeIdemployeeId', employeeId)
-//    console.log('----------', this)
         if (!employeeId) {
             this.managers = [];
             this.children = [];
@@ -112,7 +105,6 @@ export class TimeOffEmpOrgChart extends Component {
             this.managers_more = orgData.managers_more;
             this.self = orgData.self;
             this.render(true);
-//            console.log('mkkkkkkkkkk',this)
         }
     }
 

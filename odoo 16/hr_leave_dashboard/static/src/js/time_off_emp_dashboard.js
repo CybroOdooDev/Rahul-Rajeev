@@ -8,7 +8,6 @@ import { TimeOffEmpOrgChart } from './emp_org_chart';
 import { EmpDepartmentCard } from './time_off_emp_card';
 import { ApprovalStatusCard } from './time_off_emp_card';
 
-//console.log("***********", TimeOffCard)
 import session from 'web.session';
 import { useBus, useService } from "@web/core/utils/hooks";
 
@@ -16,6 +15,8 @@ const { Component, useState, onWillStart } = owl;
 
 patch(TimeOffDashboard.prototype, 'hr_holidays.TimeOffDashboard',{
 
+        //It sets the context based on the employee ID provided and checks
+        //if the logged-in user has a specific user group, setting the manager property accordingly.
         async loadDashboardData() {
         const context = {};
         if (this.props.employeeId !== null) {
@@ -73,13 +74,17 @@ patch(TimeOffDashboard.prototype, 'hr_holidays.TimeOffDashboard',{
                 context: context
             }
         );
+        this.all_validated_leaves = await this.orm.call(
+            'hr.leave',
+            'get_all_validated_leaves',
+            [],
+            {
+                context: context
+            }
+        );
         if (this.props.employeeId == null) {
             this.props.employeeId = this.current_employee.id;
         }
-
-        console.log('popooooooooooooooooooooopopop', this)
-
-
     }
 });
 

@@ -6,9 +6,6 @@ export function usePublicHolidays(props) {
         const publicHolidays = props.model.publicHolidays[date];
 
         if (publicHolidays) {
-//         console.log('date',date)
-//        console.log('publicHolidays', publicHolidays)
-//        console.log('info', info)
             info.el.classList.add('fc-public-holiday');
         }
     }

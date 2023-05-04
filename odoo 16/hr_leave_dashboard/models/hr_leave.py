@@ -1,27 +1,26 @@
-# -*- coding: utf-8 -*-
-#############################################################################
+# -- coding: utf-8 --
+###################################################################################
 #
 #    Cybrosys Technologies Pvt. Ltd.
+#    Copyright (C) 2023-TODAY Cybrosys Technologies (<https://www.cybrosys.com>).
+#    Author: Cybrosys (<https://www.cybrosys.com>)
 #
-#    Copyright (C) 2023-TODAY Cybrosys Technologies(<https://www.cybrosys.com>)
-#    Author: Cybrosys Techno Solutions(<https://www.cybrosys.com>)
-#
-#    You can modify it under the terms of the GNU LESSER
-#    GENERAL PUBLIC LICENSE (LGPL v3), Version 3.
+#    This program is free software: you can modify
+#    it under the terms of the GNU Affero General Public License (AGPL) as
+#    published by the Free Software Foundation, either version 3 of the
+#    License, or (at your option) any later version.
 #
 #    This program is distributed in the hope that it will be useful,
 #    but WITHOUT ANY WARRANTY; without even the implied warranty of
 #    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-#    GNU LESSER GENERAL PUBLIC LICENSE (LGPL v3) for more details.
+#    GNU Affero General Public License for more details.
 #
-#    You should have received a copy of the GNU LESSER GENERAL PUBLIC LICENSE
-#    (LGPL v3) along with this program.
-#    If not, see <http://www.gnu.org/licenses/>.
+#    You should have received a copy of the GNU Affero General Public License
+#    along with this program.  If not, see <https://www.gnu.org/licenses/>.
 #
-#############################################################################
+###################################################################################
 import pytz
-from odoo import models, fields, api
-from dateutil.relativedelta import relativedelta
+from odoo import api, models
 import datetime
 
 
@@ -35,16 +34,11 @@ class HRLeave(models.Model):
             name=employee.name,
             job_id=employee.job_id.name,
             approval_status_count=self.get_approval_status_count(employee.id)
-            # link='/mail/view?model=%s&res_id=%s' % ('hr.employee.public', employee.id,),
-            # job_id=employee.job_id.id,
-            # job_name=employee.job_id.name or '',
-            # # job_title=employee.job_id.name or '',
-            # direct_sub_count=len(employee.child_ids - employee),
-            # indirect_sub_count=employee.child_all_count,
         )
 
     @api.model
     def get_current_employee(self):
+        """ This function fetches current employee details in a dictionary"""
         current_employee = self.env.user.employee_ids
 
         current_employee_details = {
@@ -72,6 +66,10 @@ class HRLeave(models.Model):
 
     @api.model
     def get_absentees(self):
+        """The function retrieves a list of employees who are absent on the current date by
+        querying the hr_leave table and comparing the date_from and date_to fields of validated
+        leave requests. It returns a list of dictionaries containing the employee's name,
+        employee_id, date_from, and date_to """
         today = datetime.datetime.now()
         current_employee = self.env.user.employee_ids
         children = [self._prepare_employee_data(child) for child in current_employee.child_ids if
@@ -100,8 +98,8 @@ class HRLeave(models.Model):
 
     @api.model
     def get_current_shift(self):
+        """ This function fetches current employee's current shift"""
         current_employee = self.env.user.employee_ids
-        # print('current_employee', current_employee)
         employee_tz = current_employee.tz or self.env.context.get('tz')
         employee_pytz = pytz.timezone(employee_tz) if employee_tz else pytz.utc
         employee_datetime = datetime.datetime.now().astimezone(employee_pytz)
@@ -109,7 +107,6 @@ class HRLeave(models.Model):
         minute = employee_datetime.strftime("%M")
         day = employee_datetime.strftime("%A")
         time = hour + '.' + minute
-        # day_num = 0 if day == 'Monday' else 1 if day == 'Tuesday' else 2 if day == 'Wednesday' else 3 if day == 'Thursday' else 4 if day == 'Friday' else 5 if day == 'Saturday' else 6 if day == 'Sunday' else 3
         if day == 'Monday':
             day_num = '0'
         elif day == 'Tuesday':
@@ -128,19 +125,15 @@ class HRLeave(models.Model):
         for shift in current_employee.resource_calendar_id.attendance_ids:
             if shift.dayofweek == day_num and shift.hour_from <= float(time) <= shift.hour_to:
                 return shift.name
-            # else:
         return False
 
     @api.model
     def get_upcoming_holidays(self):
+        """ This function fetches upcoming holidays"""
         current_employee = self.env.user.employee_ids
         employee_tz = current_employee.tz or self.env.context.get('tz')
         employee_pytz = pytz.timezone(employee_tz) if employee_tz else pytz.utc
         employee_datetime = datetime.datetime.now().astimezone(employee_pytz)
-        # print(employee_tz)
-        # print(employee_pytz)
-        # print(employee_datetime)
-        # holidays = self.env['resource.calendar.leaves'].search([('resource_id', '=', False)])
         query = "SELECT * FROM public.resource_calendar_leaves WHERE resource_id is null"
         self._cr.execute(query)
         holidays = self._cr.dictfetchall()
@@ -148,11 +141,11 @@ class HRLeave(models.Model):
         for holiday in holidays:
             if employee_datetime.date() < holiday.get('date_to').date():
                 upcoming_holidays.append(holiday)
-        # print(upcoming_holidays)
         return upcoming_holidays
 
     @api.model
     def get_approval_status_count(self, current_employee):
+        """ This function fetches approval status count"""
         validate_count = len(self.env['hr.leave'].search([('employee_id', '=', current_employee),
                                                           ('state', '=', 'validate')]))
         confirm_count = len(self.env['hr.leave'].search([('employee_id', '=', current_employee),
@@ -166,3 +159,21 @@ class HRLeave(models.Model):
             'refuse_count': refuse_count
         }
         return approval_status_count
+
+    @api.model
+    def get_all_validated_leaves(self):
+        """ This function fetches all validated leaves"""
+        leaves = self.env['hr.leave'].search([('state', '=', 'validate')])
+        all_validated_leaves = []
+        for leave in leaves:
+            all_validated_leaves.append({
+                'id': leave.id,
+                'employee_id': leave.employee_id.id,
+                'employee_name': leave.employee_id.name,
+                'request_date_from': leave.request_date_from,
+                'request_date_to': leave.request_date_to,
+                'leave_type_id': leave.holiday_status_id.id,
+                'leave_type': leave.holiday_status_id.name,
+                'number_of_days': leave.number_of_days
+            })
+        return all_validated_leaves
