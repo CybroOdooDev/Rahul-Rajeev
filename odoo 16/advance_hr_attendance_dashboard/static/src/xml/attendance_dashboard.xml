@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<template id="template" xml:space="preserve">
+    <t t-name="AttendanceDashboard">
+        <div>
+            <p><h1>HR Attendance Dashboard</h1></p>
+        </div>
+        <div>
+            <form class="form-group col-6">
+                <select id="filter_duration"
+                        class="form-control">
+                    <option id="this_week"
+                            value="this_week">This Week</option>
+                    <option id="last_15_days"
+                            value="last_15_days">Last 15 days</option>
+                    <option id="this_month"
+                            value="this_month">This Month</option>
+                </select>
+            </form>
+        </div>
+        <div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>
+                            <div class="employee_name">
+                            <strong>
+                                Employee Name
+                            </strong>
+                            </div>
+                        </th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+
+    </t>
+</template>

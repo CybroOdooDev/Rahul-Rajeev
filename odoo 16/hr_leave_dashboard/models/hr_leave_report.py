@@ -97,7 +97,6 @@ class HRLeaveReport(models.AbstractModel):
         filtered_list = []
         filtered_tuple = []
         for leave in leave_data:
-            # print(leave.get('hr_leave_type_id'), leave.get('emp_id'))
             leave_list = pandas.date_range(leave.get('request_date_from'),
                                            leave.get('request_date_to') - timedelta(days=1), freq='d').strftime(
                 "%Y-%m-%d").tolist()
