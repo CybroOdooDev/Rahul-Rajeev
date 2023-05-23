@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8" ?>
 <odoo>
     <data>
         <record id="action_dashboard_attendance" model="ir.actions.client">
@@ -8,8 +9,5 @@
         <menuitem name="Dashboard" id="menu_attendance_dashboard" parent="hr_attendance.menu_hr_attendance_root"
                   sequence="0"
                   action="action_dashboard_attendance"/>
-<!--        <record model="ir.ui.menu" id="account.menu_board_journal_1">-->
-<!--            <field name="name">Overview</field>-->
-<!--        </record>-->
     </data>
 </odoo>

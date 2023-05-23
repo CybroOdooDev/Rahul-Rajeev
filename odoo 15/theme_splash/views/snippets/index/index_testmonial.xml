@@ -1,15 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
 <odoo>
-    <template id="index_testmonial_snippet" inherit_id="website.snippets"
-              name="index_testmonial">
-        <xpath expr="//div[@id='snippet_feature']/div[hasclass('o_panel_body')]"
-               position="inside">
-            <t t-snippet="theme_splash.index_testmonial"
-               t-thumbnail="/theme_splash/static/src/images/snippets/testimonials.png"
-
-            />
-        </xpath>
-    </template>
     <template id="index_testmonial" name="Index Testimonial snippet">
+        <!--        Displays a section featuring a carousel of customer testimonials with accompanying images,-->
+        <!--        as well as a header and subheader. It is designed to showcase positive feedback -->
+        <!--        from customers and promote the company's services.-->
         <section class="testmonial py-5">
             <div class="container mt-5">
                 <div class="row">
@@ -30,7 +24,6 @@
                                     Excellent service and cleaning results
                                 </h2>
                             </div>
-
                             <div id="carouselExampleIndicators"
                                  class="carousel slide" data-ride="carousel">
                                 <ol class="carousel-indicators">
@@ -138,8 +131,6 @@
                                     <span class="sr-only">Next</span>
                                 </a>
                             </div>
-
-
                         </div>
                     </div>
                 </div>

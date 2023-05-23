@@ -49,12 +49,9 @@ odoo.define('theme_watchhut.theme_watchhut', function (require) {
       $(".filter-button").click(function () {
         var value = $(this).attr('data-filter');
         if (value == "all") {
-          //$('.filter').removeClass('hidden');
           $('.filter').show('1000');
         }
         else {
-          //            $('.filter[filter-item="'+value+'"]').removeClass('hidden');
-          //            $(".filter").not('.filter[filter-item="'+value+'"]').addClass('hidden');
           $(".filter").not('.' + value).hide('3000');
           $('.filter').filter('.' + value).show('3000');
         }
@@ -72,10 +69,6 @@ odoo.define('theme_watchhut.theme_watchhut', function (require) {
     $(window).scroll(function () {
         $(".banner_contact").css("opacity", 1 - $(window).scrollTop() / 250);
     });
-
-//    $(window).scroll(function () {
-//        $(".banner").css("opacity", 1 - $(window).scrollTop() / 250);
-//    });
 
     $(document).ready(function(){
         var quantitiy=0;

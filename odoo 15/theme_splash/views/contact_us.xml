@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8" ?>
 <odoo>
     <template id="contact_us" inherit_id="website.contactus" active="True"
               name="Contact 1">
@@ -13,7 +14,6 @@
         <xpath expr="//section[hasclass('s_text_block')]"
                position="replace">
             <!-- Discuss section starts here -->
-
             <section class="services1 py-5 pb-5">
                 <div class="exp_wrapper">
                     <div class="container">
@@ -50,11 +50,9 @@
                     </div>
                 </div>
             </section>
-
             <!-- Discuss section ends here -->
 
             <!-- Contact info section starts here -->
-
             <section class="address">
                 <div class="container">
                     <div class="contact_col">
@@ -72,7 +70,6 @@
                             <div class="contact_icon">
                                 <img src="/theme_splash/static/src/images/contact/envelope.png"/>
                             </div>
-
                             <h4>Contact Address</h4>
                             <div class="wrapper">
                                 <p class="fpm">
@@ -86,13 +83,11 @@
                                     </a>
                                 </p>
                             </div>
-
                         </di>
                         <di class="contact_info">
                             <div class="contact_icon">
                                 <img src="/theme_splash/static/src/images/contact/support.png"/>
                             </div>
-
                             <h4>Contact Address</h4>
                             <div class="wrapper">
                                 <p class="fpm">
@@ -102,13 +97,11 @@
                                     <a href="tel:+91123456789">+91 123456978</a>
                                 </p>
                             </div>
-
                         </di>
                         <di class="contact_info">
                             <div class="contact_icon">
                                 <img src="/theme_splash/static/src/images/contact/time.png"/>
                             </div>
-
                             <h4>Contact Address</h4>
                             <p class="para">Mon-Fri: 8 AM - 5 PM
                                 Sat-Sun: Closed
@@ -117,16 +110,11 @@
                     </div>
                 </div>
             </section>
-
             <!-- Contact info section ends here -->
 
-
             <!-- Contact form section starts here -->
-
             <section class="contact_form s_website_form my-5 mt-5">
-
                 <div class="container" name="mail_button">
-
                     <div class="form">
                         <h3>
                             Get in Touch. We're Here to Help

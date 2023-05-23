@@ -1,9 +1,7 @@
 .blog{
     background-color:$color-bg;
     margin-top: 90px;
-
     .exp_wrapper{
-        
         .ex-1{
             padding-bottom: 40px;
             padding-top: 70px;
@@ -35,11 +33,8 @@
                   
                 }
             }
-         
         }
     }
-
-    
     .blog_contents{
         padding-top: 40px;
         padding-bottom: 40px;
@@ -52,7 +47,6 @@
 overflow: hidden !important;
 .img_wrapper2{
     overflow: hidden;
-   
 }
 .wrapper{
 padding-left: 15px;
@@ -62,18 +56,14 @@ border-bottom-left-radius: 5px;
 border-bottom-right-radius: 5px;
 box-shadow:  2px 2px;
 }
-
 #zoomIn{
-
     transform: scale(1);
     transition: .3s ease-in-out;
     border-radius: 6px 6px 0px 0px;
     -webkit-border-radius: 6px 6px 0px 0px;
     -o-border-radius: 6px 6px 0px 0px;
     -moz-border-radius: 6px 6px 0px 0px;
-
     &:hover{
-        
         transform: scale(1.3);
         border-radius: 6px 6px 0px 0px;
         -webkit-border-radius: 6px 6px 0px 0px;
@@ -82,7 +72,6 @@ box-shadow:  2px 2px;
 
 }
 }
-
 
     ul{ 
         margin-top: 30px;

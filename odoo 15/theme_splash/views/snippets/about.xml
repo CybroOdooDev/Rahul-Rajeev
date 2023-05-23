@@ -1,14 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
 <odoo>
-    <template id="about_banner" inherit_id="website.snippets"
-              name="About banner">
-        <xpath expr="//div[@id='snippet_feature']/div[hasclass('o_panel_body')]"
-               position="inside">
-            <t t-snippet="theme_splash.s_about"
-               t-thumbnail="/theme_splash/static/src/images/snippets/about-feature-block-1.png"
-            />
-        </xpath>
-    </template>
     <template id="s_about" name="About Snippet">
+<!--        The template represents a webpage section providing information about a -->
+<!--        sanitizing services company. It includes sections such as an introduction -->
+<!--        to the company, details about the products used, disinfection and sterilization-->
+<!--        services, statistics showcasing their success, a team members section, and -->
+<!--        a booking/contact section. The template combines visually appealing design -->
+<!--        with concise and informative content to convey the company's expertise and -->
+<!--        professionalism in the sanitizing industry.-->
         <header>
             <section class="banner_about">
                 <div class="container">
@@ -19,7 +18,6 @@
             </section>
         </header>
         <section class="about3 py-5 pb-5">
-
             <div class="exp_wrapper">
                 <div class="container">
                     <div class="row">
@@ -53,7 +51,8 @@
                         </div>
                         <div class="col-lg-6 col-12">
                             <div class="about-img">
-                                <img src="/theme_splash/static/src/images/about_main/image3.jpg" alt=""/>
+                                <img src="/theme_splash/static/src/images/about_main/image3.jpg"
+                                     alt=""/>
                             </div>
                         </div>
                     </div>
@@ -63,9 +62,7 @@
         <!-- About section ends here -->
 
         <!-- Product_do _we_use service section starts here -->
-
         <section class="about_main_2 py-5 pb-5">
-
             <div class="exp_wrapper">
                 <div class="container">
                     <div class="row">
@@ -84,7 +81,6 @@
 
                             </div>
                         </div>
-
                         <div class="wrapper">
                             <div class="row">
                                 <div class="col-lg-4 col-md-12 col-12">
@@ -140,9 +136,7 @@
         <!-- Product_do _we_use service section ends here -->
 
         <!-- Desinfection section starts here -->
-
         <section class="about_main_3 py-5 pb-5">
-
             <div class="exp_wrapper">
                 <div class="container">
                     <div class="row">
@@ -193,17 +187,13 @@
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-6 col-sm-6 col-12">
-
                             <div class="about-img">
                                 <img src="/theme_splash/static/src/images/about_main/about2.jpg"/>
-
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-6 col-sm-6 col-12">
-
                             <div class="about-img">
                                 <img src="/theme_splash/static/src/images/about_main/about3.jpg"/>
-
                             </div>
                         </div>
                     </div>
@@ -213,9 +203,7 @@
         <!-- Desinfection section ends here -->
 
         <!-- Success section starts here -->
-
         <section class="about_main_4 py-5 pb-5">
-
             <div class="exp_wrapper">
                 <div class="container">
                     <div class="row">
@@ -234,7 +222,6 @@
                             </div>
                         </div>
                     </div>
-
                     <div class="expect_bottom">
                         <div class="row">
                             <div class="col-lg-3 col-md-3 col-sm-6 col-6">
@@ -297,7 +284,6 @@
         <!-- Success section ends here -->
 
         <!-- Team section starts here -->
-
         <section class="about_main_5 py-5 pb-5">
             <div class="exp_wrapper">
                 <div class="container">
@@ -357,11 +343,9 @@
                 </div>
             </div>
         </section>
-
         <!-- Team section starts here -->
 
         <!-- Booking section starts here -->
-
         <section class="booking py-5">
             <div class="container">
                 <div class="wrapper">
@@ -375,15 +359,12 @@
                             +1(12) 366 411 4999
                         </p>
                     </div>
-
                     <div class="buttons">
                         <a href="#" class="btn btn-get_t">Request a Quote</a>
                         <a href="#" class="btn btn-booking">Contact Us</a>
                     </div>
                 </div>
-
             </div>
-
         </section>
     </template>
 </odoo>

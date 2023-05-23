@@ -19,7 +19,6 @@
 #    If not, see <http://www.gnu.org/licenses/>.
 #
 #############################################################################
-
 from odoo import models
 
 
@@ -27,6 +26,7 @@ class ThemeWatchHut(models.AbstractModel):
     _inherit = 'theme.utils'
 
     def _theme_watchhut_post_copy(self, mod):
+        """"Used to enable and disable certain views"""
 
         self.enable_view('website.template_header_default')
         self.enable_view('website.template_header_default_align_right')

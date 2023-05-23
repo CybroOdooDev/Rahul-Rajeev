@@ -1,15 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
 <odoo>
-    <template id="service_banner" inherit_id="website.snippets"
-              name="Service banner">
-        <xpath expr="//div[@id='snippet_feature']/div[hasclass('o_panel_body')]"
-               position="inside">
-            <t t-snippet="theme_splash.s_service"
-               t-thumbnail="/theme_splash/static/src/images/snippets/services.png"
-
-            />
-        </xpath>
-    </template>
     <template id="s_service" name="Service Snippet">
+<!--        The above template represents a section of a website that showcases -->
+<!--        services offered by a company. It includes a header with a banner, a-->
+<!--        section describing the importance of disinfecting and sanitizing, and a -->
+<!--        tabbed section for residential and commercial services with -->
+<!--        corresponding details and images.-->
         <header>
             <section class="banner_about">
                 <div class="container">
@@ -22,7 +18,6 @@
         <!-- Header section ends here -->
 
         <!-- Service1 section starts here -->
-
         <section class="services1 py-5 pb-5">
             <div class="exp_wrapper">
                 <div class="container">
@@ -105,7 +100,6 @@
         <!-- Service1 section ends here -->
 
         <!-- Service Tab section starts here -->
-
         <section class="tabs">
             <div class="container">
                 <div class="row">
@@ -134,20 +128,24 @@
                                     <div class="col-lg-4 col-md-12">
                                         <div class="tab_left">
                                             <ul>
-                                                <li><span
-                                                        class=" 	fas fa-stethoscope"></span>
+                                                <li>
+                                                    <span
+                                                            class=" 	fas fa-stethoscope"></span>
                                                     Matres Sanitizing
                                                 </li>
-                                                <li><span
-                                                        class=" 	 	fas fa-building"></span>
+                                                <li>
+                                                    <span
+                                                            class=" 	 	fas fa-building"></span>
                                                     Furniture Sanitizing
                                                 </li>
-                                                <li><span
-                                                        class=" 	 	fas fa-industry"></span>
+                                                <li>
+                                                    <span
+                                                            class=" 	 	fas fa-industry"></span>
                                                     Carpet Sanitizing
                                                 </li>
-                                                <li><span
-                                                        class=" 	fa fa-graduation-cap	"></span>
+                                                <li>
+                                                    <span
+                                                            class=" 	fa fa-graduation-cap	"></span>
                                                     Whole Home Sanitizing
                                                 </li>
                                             </ul>
@@ -226,26 +224,29 @@
                                                         corrupti,
 
                                                     </p>
-
                                                     <ul>
                                                         <li>
-                                                            <span class=" 	far fa-circle"></span> The
+                                                            <span class=" 	far fa-circle"></span>
+                                                            The
                                                             accumulation of
                                                             allergens such as
                                                             dust mite.
                                                         </li>
-                                                        <li><span
-                                                                class=" 	far fa-circle"></span>
+                                                        <li>
+                                                            <span
+                                                                    class=" 	far fa-circle"></span>
                                                             Prevent the build-up
                                                             of biological matter
                                                         </li>
-                                                        <li><span
-                                                                class=" 	far fa-circle"></span>
+                                                        <li>
+                                                            <span
+                                                                    class=" 	far fa-circle"></span>
                                                             Carpet cleaning and
                                                             flooring maintenance
                                                         </li>
-                                                        <li><span
-                                                                class=" 	far fa-circle"></span>
+                                                        <li>
+                                                            <span
+                                                                    class=" 	far fa-circle"></span>
                                                             Protect the fabric
                                                             quality
                                                         </li>
@@ -255,7 +256,6 @@
                                                         Get Service Now
                                                     </a>
                                                 </div>
-
                                             </div>
                                         </div>
                                     </div>
@@ -268,24 +268,29 @@
                                     <div class="col-lg-4 col-md-12">
                                         <div class="tab_left">
                                             <ul>
-                                                <li><span
-                                                        class=" 	fas fa-stethoscope"></span>
+                                                <li>
+                                                    <span
+                                                            class=" 	fas fa-stethoscope"></span>
                                                     Medical leaning
                                                 </li>
-                                                <li><span
-                                                        class=" 	 	fas fa-building"></span>
+                                                <li>
+                                                    <span
+                                                            class=" 	 	fas fa-building"></span>
                                                     Office leaning
                                                 </li>
-                                                <li><span
-                                                        class=" 	 	fas fa-industry"></span>
+                                                <li>
+                                                    <span
+                                                            class=" 	 	fas fa-industry"></span>
                                                     Industry Cleaning
                                                 </li>
-                                                <li><span
-                                                        class=" 	fa fa-graduation-cap	"></span>
+                                                <li>
+                                                    <span
+                                                            class=" 	fa fa-graduation-cap	"></span>
                                                     Education Centre
                                                 </li>
-                                                <li><span
-                                                        class=" 	 	fa fa-cube"></span>
+                                                <li>
+                                                    <span
+                                                            class=" 	 	fa fa-cube"></span>
                                                     Factory Cleaning
                                                 </li>
                                             </ul>
@@ -317,7 +322,7 @@
                                                 <div class="right_2">
                                                     <div class="row">
                                                         <div class="col-lg-6 col-md-12">
-                                                            <img src="/theme_splash/static/src/images/about_main/image3.jpg"/>
+                                                      <img src="/theme_splash/static/src/images/about_main/image3.jpg"/>
                                                         </div>
                                                         <div class="col-lg-6 col-md-12">
                                                             <p class="para pt-0">
@@ -362,28 +367,30 @@
                                                         sit, elit dolores nulla
                                                         quisdam. minus aliquam
                                                         corrupti,
-
                                                     </p>
-
                                                     <ul>
                                                         <li>
-                                                            <span class=" 	far fa-circle"></span> The
+                                                            <span class=" 	far fa-circle"></span>
+                                                            The
                                                             accumulation of
                                                             allergens such as
                                                             dust mite.
                                                         </li>
-                                                        <li><span
-                                                                class=" 	far fa-circle"></span>
+                                                        <li>
+                                                            <span
+                                                                    class=" 	far fa-circle"></span>
                                                             Prevent the build-up
                                                             of biological matter
                                                         </li>
-                                                        <li><span
-                                                                class=" 	far fa-circle"></span>
+                                                        <li>
+                                                            <span
+                                                                    class=" 	far fa-circle"></span>
                                                             Carpet cleaning and
                                                             flooring maintenance
                                                         </li>
-                                                        <li><span
-                                                                class=" 	far fa-circle"></span>
+                                                        <li>
+                                                            <span
+                                                                    class=" 	far fa-circle"></span>
                                                             Protect the fabric
                                                             quality
                                                         </li>
@@ -393,7 +400,6 @@
                                                         Get Service Now
                                                     </a>
                                                 </div>
-
                                             </div>
                                         </div>
                                     </div>
@@ -402,10 +408,7 @@
                         </div>
                     </div>
                 </div>
-
             </div>
-
-
         </section>
     </template>
 </odoo>

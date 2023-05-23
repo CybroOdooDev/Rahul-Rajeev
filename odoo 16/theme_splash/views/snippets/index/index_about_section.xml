@@ -1,16 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
 <odoo>
-    <template id="index_about_section_snippet" inherit_id="website.snippets"
-              name="index_about_section">
-        <xpath expr="//div[@id='snippet_feature']/div[hasclass('o_panel_body')]"
-               position="inside">
-            <t t-snippet="theme_splash.index_about_feature1"
-               t-thumbnail="/theme_splash/static/src/images/snippets/feature-block-1.png"
-            />
-        </xpath>
-    </template>
     <template id="index_about_feature1" name="Index Feature1 snippet">
+<!--        Defines a section of the webpage that showcases the company's commitment to protecting -->
+<!--        the environment and its effectiveness in cleaning. -->
+<!--        It includes text, an image, and a call-to-action button.-->
         <section class="about3 py-5 pb-5">
-
             <div class="exp_wrapper">
                 <div class="container">
                     <div class="row">
@@ -46,10 +40,7 @@
                         </div>
                     </div>
                 </div>
-
             </div>
-
         </section>
-
     </template>
 </odoo>

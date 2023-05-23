@@ -16,7 +16,7 @@
         <t t-set="child_ids" t-value="props.child_ids"/>
         <t t-set="child_count" t-value="props.child_count"/>
         <t t-set="image" t-value="props.image_1920"/>
-        <div class="w-100 mt-2 mb-2">
+        <div class="w-100 mt-2 mb-2 employee_box">
         <div class="employee_image">
           <t t-if="image">
               <img style="width: 50px; height: 50px;" t-attf-src="data:image/png;base64,{{image}}"/>

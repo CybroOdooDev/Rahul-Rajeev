@@ -1,7 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
 <odoo>
     <template id="index_blog_snippet"
               inherit_id="website_blog.dynamic_filter_template_blog_post_horizontal"
               name="Blog">
+<!--        Used for displaying a list of blog posts on a website. -->
+<!--        It includes a section header, post date, title, subtitle, and an image for each post.-->
         <xpath expr="//figcaption" position="replace">
         </xpath>
         <xpath expr="//figure" position="before">

@@ -1,14 +1,5 @@
+<?xml version="1.0" encoding="UTF-8" ?>
 <odoo>
-    <template id="service_banner" inherit_id="website.snippets"
-              name="Service banner">
-        <xpath expr="//div[@id='snippet_feature']/div[hasclass('o_panel_body')]"
-               position="inside">
-            <t t-snippet="theme_splash.s_service"
-               t-thumbnail="/theme_splash/static/src/images/snippets/services.png"
-
-            />
-        </xpath>
-    </template>
     <template id="s_service" name="Service Snippet">
         <header>
             <section class="banner_about">
@@ -129,7 +120,6 @@
                         <div class="tab-content" id="myTabContent">
                             <div class="tab-pane fade show active" id="home"
                                  role="tabpanel" aria-labelledby="home-tab">
-
                                 <div class="row">
                                     <div class="col-lg-4 col-md-12">
                                         <div class="tab_left">
@@ -260,7 +250,6 @@
                                         </div>
                                     </div>
                                 </div>
-
                             </div>
                             <div class="tab-pane fade" id="profile"
                                  role="tabpanel" aria-labelledby="profile-tab">
@@ -362,9 +351,7 @@
                                                         sit, elit dolores nulla
                                                         quisdam. minus aliquam
                                                         corrupti,
-
                                                     </p>
-
                                                     <ul>
                                                         <li>
                                                             <span class=" 	far fa-circle"></span> The
@@ -393,7 +380,6 @@
                                                         Get Service Now
                                                     </a>
                                                 </div>
-
                                             </div>
                                         </div>
                                     </div>
@@ -402,10 +388,7 @@
                         </div>
                     </div>
                 </div>
-
             </div>
-
-
         </section>
     </template>
 </odoo>

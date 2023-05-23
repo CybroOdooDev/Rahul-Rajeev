@@ -1,14 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
 <odoo>
-    <template id="index_experience_snippet" inherit_id="website.snippets"
-              name="index_experience">
-        <xpath expr="//div[@id='snippet_feature']/div[hasclass('o_panel_body')]"
-               position="inside">
-            <t t-snippet="theme_splash.index_experience"
-               t-thumbnail="/theme_splash/static/src/images/snippets/experience-block.png"
-            />
-        </xpath>
-    </template>
     <template id="index_experience" name="Index Experience snippet">
+<!--        Displays a section on the website homepage that showcases the company's experience, -->
+<!--        services, and benefits. It includes text, images, and a call-to-action button -->
+<!--        for users to learn more.-->
         <section class="experience pb-5 py-5">
             <div class="exp_wrapper">
                 <div class="container">
@@ -65,7 +60,6 @@
                         </div>
                     </div>
                 </div>
-
             </div>
         </section>
     </template>

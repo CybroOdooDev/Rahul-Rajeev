@@ -19,42 +19,45 @@
 #    If not, see <http://www.gnu.org/licenses/>.
 #
 #############################################################################
-
 {
     "name": "Theme College",
-    "summary": "Theme College",
     "version": "16.0.1.0.0",
     "category": "Theme/Education",
-    "website": "https://www.cybrosys.com",
+    "summary": "Theme College is a new kind of Theme. The theme is a very "
+               "user-friendly and is suitable for your"
+                " educational institutions website.",
     "description": """
-        Theme College
-    """,
+            It is the most powerful, easy to use theme with Front-end styles.
+            Carousel slide, College location, Placement cell and Scholarship 
+            form snippets facilitates to add better user experience.
+            Contains Custom Pages including Courses, Facilities, Gallery, Alumni.
+            It has Image Viewer on Gallery.
+        """,
     'author': 'Cybrosys Techno Solutions',
     'company': 'Cybrosys Techno Solutions',
     'maintainer': 'Cybrosys Techno Solutions',
+    "website": "https://www.cybrosys.com",
+    'images': [
+            'static/description/banner.png',
+            'static/description/themecollege.png',
+        ],
     "depends": [
         'base',
         'web',
         'website',
         'website_livechat',
     ],
-    'images': [
-    ],
     "data": [
-        'views/contact_us.xml',
-        'views/snippets.xml',
-        'views/header.xml',
-        'views/alumni.xml',
-        'views/course.xml',
-        'views/facility.xml',
-        'views/gallery.xml',
-        'views/location.xml',
-        'views/footer.xml',
-        'views/views.xml',
+        'security/ir.model.access.csv',
+        'views/college_location.xml',
+        'views/theme_college_views.xml',
+        'views/website_templates.xml',
+        'views/theme_college_templates.xml',
     ],
     'assets': {
             'web.assets_frontend': [
-                'theme_college/static/src/css/style.css',
+                'theme_college/static/src/css/theme_college.css',
+                'theme_college/static/src/js/college_location.js',
                 ],
     },
     'license': 'LGPL-3',

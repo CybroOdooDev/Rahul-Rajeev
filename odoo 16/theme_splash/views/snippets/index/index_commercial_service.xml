@@ -1,15 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" ?>
 <odoo>
-    <template id="index_banner2_snippet"
-              inherit_id="website.snippets"
-              name="index_banner2_service">
-        <xpath expr="//div[@id='snippet_feature']/div[hasclass('o_panel_body')]"
-               position="inside">
-            <t t-snippet="theme_splash.index_highlight_banner"
-               t-thumbnail="/theme_splash/static/src/images/snippets/highlight-banner-block.png"
-            />
-        </xpath>
-    </template>
     <template id="index_highlight_banner" name="Index Highlight Banner snippet">
+<!--        Creates a banner section on a webpage with a card that promotes commercial or -->
+<!--        residential sanitizing services, including a call-to-action button and contact option.-->
         <section class="commercial_service  pb-5">
             <div class="card text-center">
                 <div class="card-body">

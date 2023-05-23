@@ -7,7 +7,6 @@
         <field name="arch" type="xml">
             <xpath expr="//field[@name='leave_validation_type']" position="after">
                 <field name="leave_code"/>
-                <field name="leave_code_color" widget="color_picker"/>
             </xpath>
         </field>
     </record>

@@ -1,0 +1,14 @@
+.attendance_table{
+
+    float:left;
+    margin:22px 10px;
+
+}
+
+.attendance_table thead, tbody, tfoot, tr, td, th {
+
+    padding:0.5em;
+    border:1px solid #ccc;
+
+
+}

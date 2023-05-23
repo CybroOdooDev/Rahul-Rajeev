@@ -1,13 +1,22 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <odoo>
     <data>
-        <template id="gallery_heading_banner" inherit_id="website.snippets" name="Gallery Heading banner">
-            <xpath expr="//div[@id='snippet_structure']/div[hasclass('o_panel_body')]" position="inside">
-                <t t-snippet="theme_watchhut.gallery_heading" t-thumbnail="/theme_watchhut/static/src/images/snippets/heading.jpg"/>
+        <template id="gallery_heading_banner" inherit_id="website.snippets"
+                  name="Gallery Heading banner">
+            <!--            The template adds a gallery heading banner snippet to the website's snippets section. -->
+            <!--            It inserts a custom gallery heading component, along with its thumbnail image, into-->
+            <!--            the designated position within the snippet structure.-->
+            <xpath expr="//div[@id='snippet_structure']/div[hasclass('o_panel_body')]"
+                   position="inside">
+                <t t-snippet="theme_watchhut.gallery_heading"
+                   t-thumbnail="/theme_watchhut/static/src/images/snippets/heading.jpg"/>
             </xpath>
         </template>
 
         <template id="gallery_heading" name="Gallery Heading">
+            <!--            The above template represents a gallery heading component for the website.-->
+            <!--            It displays a banner section with a heading showcasing the "Men Watch Collection" -->
+            <!--            in a visually appealing manner.-->
             <!-- Section banner starts here -->
             <section class="banner">
                 <div class="container">

@@ -1,18 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
 <odoo>
-    <template id="index_service_tab_snippet" inherit_id="website.snippets"
-              name="index_tab">
-        <xpath expr="//div[@id='snippet_feature']/div[hasclass('o_panel_body')]"
-               position="inside">
-            <t t-snippet="theme_splash.index_service_tab"
-               t-thumbnail="/theme_splash/static/src/images/snippets/services-block.png"
-            />
-        </xpath>
-    </template>
     <template id="index_service_tab" name="Index Service Tab snippet">
+        <!--        Creates a tab section with two tabs, "Residential" and "Commercial", displaying information -->
+        <!--        and images about the sanitizing services offered for each type of property. -->
+        <!--        Each tab includes a list of icons representing the areas that can be sanitized-->
+        <!--        and a "Get Service Now" button.-->
         <section class="tab   ">
-
             <div class="container">
-
                 <div class="tabs py-5">
                     <!-- Classic tabs -->
                     <div class="classic-tabs">
@@ -93,15 +87,12 @@
                                         </div>
                                     </div>
                                 </div>
-
                             </div>
                             <div class="tab-pane fade" id="follow-classic"
                                  role="tabpanel"
                                  aria-labelledby="follow-tab-classic">
-
                                 <div class="wrapper">
                                     <div class="row">
-
                                         <div class="col-lg-6 col-md-12 col-sm-12">
                                             <div class="tab_left">
                                                 <h4>
@@ -139,11 +130,9 @@
                                                     </p>
                                                 </div>
                                             </div>
-
                                             <a href="#" class="btn btn-service">
                                                 Get Service Now >
                                             </a>
-
                                         </div>
                                         <div class="col-lg-6 col-md-12 col-sm-12">
                                             <div class="tab_right">
@@ -154,14 +143,10 @@
                                 </div>
                             </div>
                         </div>
-
                     </div>
                     <!-- Classic tabs -->
                 </div>
-
             </div>
-
         </section>
-
     </template>
 </odoo>

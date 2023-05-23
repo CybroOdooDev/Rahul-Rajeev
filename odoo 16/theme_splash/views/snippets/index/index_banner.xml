@@ -1,17 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
 <odoo>
-    <template id="Banner_snippet" inherit_id="website.snippets"
-              name="Banner">
-        <xpath expr="//div[@id='snippet_feature']/div[hasclass('o_panel_body')]"
-               position="inside">
-            <t t-snippet="theme_splash.banner"
-               t-thumbnail="/theme_splash/static/src/images/snippets/banner.png"
-            />
-        </xpath>
-    </template>
     <template id="banner" name="Index Banner snippet">
-
+<!--        This template is a banner section with a carousel of three slides showcasing a -->
+<!--        disinfecting and deodorizing spray service, each with a card containing-->
+<!--        a title, description, and "Learn More" button.-->
             <section class="banner">
-
                 <div id="carouselExampleIndicators" class="carousel slide"
                      data-bs-ride="carousel">
                     <ol class="carousel-indicators">
@@ -28,7 +21,6 @@
                         <div class="carousel-item active">
                             <div class="banner-1">
                                 <div class="card text-center">
-
                                     <div class="card-body">
                                         <h5 class="card-title">Disinfecting &amp;
                                             Deodorizing
@@ -84,22 +76,9 @@
                                             Learn More
                                         </a>
                                     </div>
-
                                 </div>
                             </div>
                         </div>
-                        <!-- <div class="carousel-item">
-                        <div class="banner-4">
-                          <div class="card text-center">
-
-                            <div class="card-body">
-                              <h5 class="card-title"> Disinfecting & Deodorizing <br><span>Spray services.</span></h5>
-                              <p class="card-text">Imagine your home so clean, it’s clinically clean</p>
-                              <a href="#" class="btn btn-primary">Learn More</a>
-                            </div>
-                          </div>
-                        </div>
-                      </div> -->
                     </div>
                     <a class="carousel-control-prev"
                        href="#carouselExampleIndicators" role="button"
@@ -116,7 +95,6 @@
                         <span class="sr-only">Next</span>
                     </a>
                 </div>
-
             </section>
     </template>
 </odoo>

@@ -1,18 +1,14 @@
 .Blog_detail {
     margin-top: 40px;
     margin-bottom: 40px;
-
     .blog_left{
         @media screen and(max-width:996px) {
-
             margin-bottom: 90px;
-            
         }
     }
     .b_left_single {
         .blog_img {
             position: relative;
-
             img {
                 width: 100%;
             }
@@ -83,7 +79,6 @@
                 font-weight: 600;
             }
         }
-
         .blog_details_2 {
             a {
                 color: $color-brand;
@@ -126,7 +121,6 @@
                         background-color: $color-sub-head;
                     }
                 }
-
                 .fb {
                     background: #3b5998;
                     color: #fff;
@@ -178,7 +172,6 @@
                 }
             }
         }
-
         .comments_section {
             margin-top: 90px;
             h4 {

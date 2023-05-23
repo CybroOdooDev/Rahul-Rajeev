@@ -40,8 +40,10 @@
     </div>
 
         <div class="d-flex flex-grow-1 align-items-center justify-content-between position-relative px-3">
-        <a t-if="!is_self" t-att-href="employee.link" class="o_employee_redirect d-flex flex-column"
-           t-att-data-employee-id="employee.id" t-on-click.prevent="() => this._onEmployeeRedirect(employee.id)">
+        <a t-if="!is_self" t-att-href="employee.link"
+           class="o_employee_redirect d-flex flex-column"
+           t-att-data-employee-id="employee.id"
+           t-on-click.prevent="() => this._onEmployeeRedirect(employee.id)">
             <b class="o_media_heading m-0 fs-6" t-esc="employee.name"/>
             <small class="text-muted fw-bold" t-esc="employee.job_title"/>
         </a>
@@ -78,7 +80,8 @@
         <t t-set="emp_count" t-value="0"/>
         <t t-set="child_count" t-value="props.child_all_count"/>
         <t t-set="manager_count" t-value="props.manager_all_count"/>
-        <div t-if='manager_count &gt; 0' class="o_org_chart_group_up position-relative">
+        <div t-if='manager_count &gt; 0'
+             class="o_org_chart_group_up position-relative">
 
         <t t-foreach="managers" t-as="employee" t-key="employee_index">
             <t t-set="emp_count" t-value="emp_count + 1"/>
@@ -88,7 +91,8 @@
         </t>
     </div>
 
-        <t t-if="child_count || manager_count" t-call="hr_leave_dashboard.hr_org_chart_employee">
+        <t t-if="child_count || manager_count"
+           t-call="hr_leave_dashboard.hr_org_chart_employee">
         <t t-set="employee_type" t-value="'self'"/>
             <t t-set="employee" t-value="self"/>
     </t>
@@ -151,7 +155,8 @@
                 <span class="flex-shrink-0"
                       t-att-style='"background-image:url(\"/web/image/hr.employee.public/" + props.employee.id + "/avatar_1024/\")"'/>
                 <b class="flew-grow-1"><t t-esc="props.employee.name"/></b>
-                <a href="#" class="ms-auto o_employee_redirect" t-att-data-employee-id="props.employee.id"
+                <a href="#" class="ms-auto o_employee_redirect"
+                   t-att-data-employee-id="props.employee.id"
                    t-on-click.prevent="() => this._onEmployeeRedirect(props.employee.id)"><i class="fa fa-external-link" role="img" aria-label='Redirect' title="Redirect"></i></a>
             </div>
         </h3>

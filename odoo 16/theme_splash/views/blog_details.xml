@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <template id="splash_blog_details" name="Splash Blog Details" inherit_id="website_blog.blog_post_complete">
+<!-- It features a two-column layout with a custom search widget on the right and the blog post content on the left.-->
         <xpath expr="//div[@id='o_wblog_post_content']" position="replace">
             <section class="Blog_detail py-5 pb-5">
                 <div class="container">

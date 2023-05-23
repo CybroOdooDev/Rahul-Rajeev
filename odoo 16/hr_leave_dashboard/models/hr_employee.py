@@ -36,11 +36,9 @@ class HrEmployee(models.Model):
         self = self or self.env.user.employee_id
         public_holidays = self._get_public_holidays(start_date, end_date)
         for holiday in public_holidays:
-
             num_days = (holiday.date_to - holiday.date_from).days
-            for d in range(num_days + 1):
-                all_days[str(holiday.date_from.date())] = d
-
+            for day in range(num_days + 1):
+                all_days[str(holiday.date_from.date())] = day
         return all_days
 
     def _get_public_holidays(self, start_date, end_date):
@@ -53,5 +51,4 @@ class HrEmployee(models.Model):
             ('resource_id', '=', False),
             ('company_id', 'in', self.env.companies.ids),
         ])
-
         return public_holidays

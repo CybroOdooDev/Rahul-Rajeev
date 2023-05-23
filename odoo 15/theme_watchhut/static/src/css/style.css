@@ -1494,4 +1494,12 @@ ul.pagination.m-0{
     margin-top: -65px !important;
 }
 }
+
+.o_wsale_layout_list .list_row{
+    flex-direction: column;
+}
+.o_wsale_layout_list .list_column{
+    width: 100%;
+    max-width: 100%;
+}
 /*# sourceMappingURL=style.css.map */

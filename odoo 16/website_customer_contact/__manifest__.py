@@ -1,10 +1,9 @@
-# -*- coding: utf-8 -*-
+# -- coding: utf-8 --
 ###################################################################################
-#    A part of OpenHRMS Project <https://www.openhrms.com>
 #
 #    Cybrosys Technologies Pvt. Ltd.
 #    Copyright (C) 2023-TODAY Cybrosys Technologies (<https://www.cybrosys.com>).
-#    Author: Cybrosys Technologies (<https://www.cybrosys.com>)
+#    Author: Cybrosys (<https://www.cybrosys.com>)
 #
 #    This program is free software: you can modify
 #    it under the terms of the GNU Affero General Public License (AGPL) as
@@ -20,36 +19,31 @@
 #    along with this program.  If not, see <https://www.gnu.org/licenses/>.
 #
 ###################################################################################
-
 {
     'name': "Website Customer Contact",
-    'description': """Website Customer Contact""",
-    'description': """This module helps you to create contact and addresses from website.""",
-    'summary': """Website Customer Contact""",
-    'category': 'Website',
     'version': '16.0.1.0.0',
+    'category': 'Website',
+    'summary': """This module helps you to create contact and addresses from website.""",
+    'description': """This module helps you to create contact and addresses from website.
+            You can create,view and edit contacts and addresses.""",
     'author': 'Cybrosys Techno Solutions',
     'company': 'Cybrosys Techno Solutions',
     'maintainer': 'Cybrosys Techno Solutions',
     'website': "https://www.cybrosys.com",
+    'images': ['static/description/banner.png'],
     'depends': ['base', 'website', 'portal'],
     'data': [
-        'views/portal_layout.xml',
-        'views/inherited_portal_my_home.xml',
-        'views/inherited_portal_breadcrumbs.xml',
-        'views/inherited_user_dropdown.xml',
-        'views/layout.xml',
-
+        'views/portal_templates.xml',
+        'views/website_customer_contact_templates.xml',
     ],
-    'images': ['static/description/banner.png'],
     'assets': {
         'web.assets_frontend': [
-            'website_customer_contact/static/src/css/style.css',
-            'website_customer_contact/static/src/js/website_customer_contact_request_form.js',
+            'website_customer_contact/static/src/css/website_customer_contact.css',
+            'website_customer_contact/static/src/js/customer_contact_form.js',
         ],
     },
     'license': 'AGPL-3',
     'installable': True,
-    'application': True,
+    'application': False,
     'auto_install': False,
 }

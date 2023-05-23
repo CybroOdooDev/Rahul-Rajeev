@@ -19,52 +19,41 @@
 #    If not, see <http://www.gnu.org/licenses/>.
 #
 #############################################################################
-
+from odoo import fields, http
 from odoo.addons.website_blog.controllers.main import WebsiteBlog
-from odoo import http, fields
 from odoo.http import request
 from odoo.osv import expression
 
 
 class WebsiteBlogInherit(WebsiteBlog):
+    """Overrides the blog() and blog_post() methods to add recent posts to
+    their respective contexts.It also sets limits and orders for the posts
+    displayed on the blog and blog post pages."""
 
-    @http.route([
-        '/blog',
-        '/blog/page/<int:page>',
-        '/blog/tag/<string:tag>',
-        '/blog/tag/<string:tag>/page/<int:page>',
-        '''/blog/<model("blog.blog"):blog>''',
-        '''/blog/<model("blog.blog"):blog>/page/<int:page>''',
-        '''/blog/<model("blog.blog"):blog>/tag/<string:tag>''',
-        '''/blog/<model("blog.blog"):blog>/tag/<string:tag>/page/<int:page>''',
-    ], type='http', auth="public", website=True, sitemap=True)
-    def blog(self, blog=None, tag=None, page=1, search=None, **opt):
-        limit = 3
-        order = 'published_date desc'
-        dom = expression.AND([
+    @http.route()
+    def blog(self, blog=None, tag=None, search=None, **opt):
+        """It fetches recent blog posts that are published on the website and
+        updates the context of the blog page with the recent posts."""
+        posts = request.env['blog.post'].search(expression.AND([
             [('website_published', '=', True),
              ('post_date', '<=', fields.Datetime.now())],
             request.website.website_domain()
-        ])
-        posts = request.env['blog.post'].search(dom, limit=limit, order=order)
+        ]), limit=3, order='published_date desc')
         res = super(WebsiteBlogInherit, self).blog(blog=blog, tag=tag, page=1,
                                                    search=search, **opt)
         res.qcontext.update({'posts_recent': posts})
         return res
 
-    @http.route([
-        '''/blog/<model("blog.blog"):blog>/<model("blog.post", "[('blog_id','=',blog.id)]"):blog_post>''',
-    ], type='http', auth="public", website=True, sitemap=True)
-    def blog_post(self, blog, blog_post, tag_id=None, page=1,
-                  enable_editor=None, **post):
-        limit = 3
-        order = 'published_date desc'
-        dom = expression.AND([
+    @http.route()
+    def blog_post(self, blog, blog_post, tag_id=None, **post):
+        """It adds a context variable 'posts_recent', which contains a list of
+        recent blog posts (limited to 3) to be displayed on the blog
+        post page."""
+        posts = request.env['blog.post'].search(expression.AND([
             [('website_published', '=', True),
              ('post_date', '<=', fields.Datetime.now())],
             request.website.website_domain()
-        ])
-        posts = request.env['blog.post'].search(dom, limit=limit, order=order)
+        ]), limit=3, order='published_date desc')
         res = super(WebsiteBlogInherit, self).blog_post(blog, blog_post,
                                                         tag_id=tag_id, page=1,
                                                         enable_editor=None,

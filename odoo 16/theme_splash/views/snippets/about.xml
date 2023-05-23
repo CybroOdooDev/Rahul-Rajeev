@@ -1,13 +1,5 @@
+<?xml version="1.0" encoding="UTF-8" ?>
 <odoo>
-    <template id="about_banner" inherit_id="website.snippets"
-              name="About banner">
-        <xpath expr="//div[@id='snippet_feature']/div[hasclass('o_panel_body')]"
-               position="inside">
-            <t t-snippet="theme_splash.s_about"
-               t-thumbnail="/theme_splash/static/src/images/snippets/about-feature-block-1.png"
-            />
-        </xpath>
-    </template>
     <template id="s_about" name="About Snippet">
         <header>
             <section class="banner_about">
@@ -19,7 +11,6 @@
             </section>
         </header>
         <section class="about3 py-5 pb-5">
-
             <div class="exp_wrapper">
                 <div class="container">
                     <div class="row">
@@ -63,9 +54,7 @@
         <!-- About section ends here -->
 
         <!-- Product_do _we_use service section starts here -->
-
         <section class="about_main_2 py-5 pb-5">
-
             <div class="exp_wrapper">
                 <div class="container">
                     <div class="row">
@@ -81,10 +70,8 @@
                                         What Product Do We Use?
                                     </h2>
                                 </div>
-
                             </div>
                         </div>
-
                         <div class="wrapper">
                             <div class="row">
                                 <div class="col-lg-4 col-md-12 col-12">
@@ -140,9 +127,7 @@
         <!-- Product_do _we_use service section ends here -->
 
         <!-- Desinfection section starts here -->
-
         <section class="about_main_3 py-5 pb-5">
-
             <div class="exp_wrapper">
                 <div class="container">
                     <div class="row">
@@ -193,17 +178,13 @@
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-6 col-sm-6 col-12">
-
                             <div class="about-img">
                                 <img src="/theme_splash/static/src/images/about_main/about2.jpg"/>
-
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-6 col-sm-6 col-12">
-
                             <div class="about-img">
                                 <img src="/theme_splash/static/src/images/about_main/about3.jpg"/>
-
                             </div>
                         </div>
                     </div>
@@ -213,9 +194,7 @@
         <!-- Desinfection section ends here -->
 
         <!-- Success section starts here -->
-
         <section class="about_main_4 py-5 pb-5">
-
             <div class="exp_wrapper">
                 <div class="container">
                     <div class="row">
@@ -234,7 +213,6 @@
                             </div>
                         </div>
                     </div>
-
                     <div class="expect_bottom">
                         <div class="row">
                             <div class="col-lg-3 col-md-3 col-sm-6 col-6">
@@ -297,7 +275,6 @@
         <!-- Success section ends here -->
 
         <!-- Team section starts here -->
-
         <section class="about_main_5 py-5 pb-5">
             <div class="exp_wrapper">
                 <div class="container">
@@ -320,7 +297,6 @@
                     <div class="team_wrapper">
                         <div class="row">
                             <div class="col-lg-4 col-md-4 col-sm-6 col-12">
-
                                 <div class="team_img ">
                                     <img id="zoomIn" class="card-img-top"
                                          src="/theme_splash/static/src/images/Team/team1.jpg"/>
@@ -331,7 +307,6 @@
                                 </div>
                             </div>
                             <div class="col-lg-4 col-md-4 col-sm-6 col-12">
-
                                 <div class="team_img mt-sm-5">
                                     <img id="zoomIn" class="card-img-top"
                                          src="/theme_splash/static/src/images/Team/team2.jpg"/>
@@ -342,7 +317,6 @@
                                 </div>
                             </div>
                             <div class="col-lg-4 col-md-4 col-sm-6 col-12 mx-sm-5 ">
-
                                 <div class="team_img  ">
                                     <img id="zoomIn" class="card-img-top"
                                          src="/theme_splash/static/src/images/Team/team3.jpg"/>
@@ -357,11 +331,9 @@
                 </div>
             </div>
         </section>
-
         <!-- Team section starts here -->
 
         <!-- Booking section starts here -->
-
         <section class="booking py-5">
             <div class="container">
                 <div class="wrapper">
@@ -381,9 +353,7 @@
                         <a href="#" class="btn btn-booking">Contact Us</a>
                     </div>
                 </div>
-
             </div>
-
         </section>
     </template>
 </odoo>

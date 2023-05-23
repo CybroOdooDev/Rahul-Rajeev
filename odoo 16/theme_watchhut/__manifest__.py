@@ -21,21 +21,26 @@
 #############################################################################
 {
     'name': 'Theme WatchHut',
-    'description': 'Theme WatchHut is an attractive and modern eCommerce Website theme',
-    'summary': 'Theme WatchHut is an attractive and modern eCommerce Website theme',
     'category': 'Theme/eCommerce',
     'version': '16.0.1.0.0',
+    'summary': 'Theme WatchHut is an attractive and modern eCommerce Website theme',
+    'description': 'Theme WatchHut is an attractive and modern eCommerce Website theme.'
+                   'The theme is a very user-friendly and is suitable for your eCommerce website.'
+                   'It is the most powerful, easy to use theme',
     'author': 'Cybrosys Techno Solutions',
     'company': 'Cybrosys Techno Solutions',
     'maintainer': 'Cybrosys Techno Solutions',
     'website': "https://www.cybrosys.com",
+    'images': [
+        'static/description/banner.png',
+        'static/description/theme_screenshot.png',
+    ],
     'depends': ['website_sale'],
     'data': [
         'views/about_page.xml',
         'views/contact_us.xml',
         'views/footer.xml',
         'views/header.xml',
-        'views/layouts.xml',
         'views/product_view.xml',
         'views/shop.xml',
         'views/snippets/gallery.xml',
@@ -43,22 +48,17 @@
         'views/snippets/shop_button.xml',
     ],
     'assets': {
-      'web.assets_frontend': [
-          '/theme_watchhut/static/src/css/style.css',
-          '/theme_watchhut/static/src/css/font-awesome.min.css',
-          '/theme_watchhut/static/src/js/custom.js',
-          '/theme_watchhut/static/src/js/custom_shop.js',
-          'https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&amp;display=swap',
-          'https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&amp;display=swap',
-
-      ]
+        'web.assets_frontend': [
+            '/theme_watchhut/static/src/css/style.css',
+            '/theme_watchhut/static/src/css/font-awesome.min.css',
+            '/theme_watchhut/static/src/js/custom.js',
+            '/theme_watchhut/static/src/js/custom_shop.js',
+            'https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&amp;display=swap',
+            'https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&amp;display=swap',
+        ]
     },
-    'images': [
-        'static/description/banner.png',
-        'static/description/theme_screenshot.png',
-    ],
     'license': 'LGPL-3',
     'installable': True,
-    'application': True,
+    'application': False,
     'auto_install': False,
 }

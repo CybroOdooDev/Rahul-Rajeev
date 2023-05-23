@@ -21,49 +21,35 @@
 ###################################################################################
 {
     'name': "Advance HR Attendance Dashboard",
-    'description': """Advance HR Attendance Report""",
-    'summary': """Advance HR Attendance Report""",
-    'category': '',
     'version': '16.0.1.0.0',
+    'description': """This HR Attendance Dashboard 
+                    includes a form for filtering attendance data, a search bar 
+                    for finding specific employees, and an HTML table for displaying 
+                    attendance information. The template also adds a "Print PDF" 
+                    button to the form using jQuery.""",
+    'summary': """This module helps you to view leaves of employee based on different leave types.""",
+    'category': 'Human Resources/Attendances',
     'author': 'Cybrosys Techno Solutions',
     'company': 'Cybrosys Techno Solutions',
     'maintainer': 'Cybrosys Techno Solutions',
     'website': "https://www.cybrosys.com",
-    'depends': ['base', 'hr_holidays', 'hr'],
+    'depends': ['base', 'hr_holidays', 'hr', 'hr_attendance'],
+    'external_dependencies': {
+        'python': ['pandas'],
+    },
     'data': [
-
-        # 'report/hr_leave_reports.xml',
-        # 'report/hr_leave_report_templates.xml',
-
         'views/hr_leave_type.xml',
         'views/dashboard_views.xml',
-
     ],
     'assets': {
         'web.assets_backend': [
-
             'advance_hr_attendance_dashboard/static/src/js/attendance_dashboard.js',
             'advance_hr_attendance_dashboard/static/src/xml/attendance_dashboard.xml',
-            # 'hr_leave_dashboard/static/src/js/calendar_model.js',
-            # 'hr_leave_dashboard/static/src/js/calendar_year_renderer.js',
-            # 'hr_leave_dashboard/static/src/js/hooks.js',
-            # 'hr_leave_dashboard/static/src/js/emp_org_chart.js',
-            # 'hr_leave_dashboard/static/src/js/time_off_emp_card.js',
-            # 'hr_leave_dashboard/static/src/js/time_off_emp_dashboard.js',
-            # 'hr_leave_dashboard/static/src/xml/approval_satus_card.xml',
-            # 'hr_leave_dashboard/static/src/xml/time_off_emp_dashboard.xml',
-            # 'hr_leave_dashboard/static/src/xml/emp_org_chart.xml',
-            # 'hr_leave_dashboard/static/src/xml/emp_department_card.xml',
-            # 'hr_leave_dashboard/static/src/xml/time_off_emp_card.xml',
-            # 'hr_leave_dashboard/static/src/css/hr_leave_dashboard.css',
-            # 'hr_org_chart/static/src/fields/hr_org_chart.scss',
-            # 'hr_leave_dashboard/static/src/scss/time_off_dashboard.scss',
-            # 'hr_holidays/static/src/dashboard/time_off_card.scss',
-            # 'hr_leave_dashboard/static/src/scss/calendar_renderer.scss'
+            'advance_hr_attendance_dashboard/static/src/css/attendance_dashboard.css',
         ],
     },
     'images': [
-        # 'static/description/banner.jpg',
+        'static/description/banner.jpg',
     ],
     'license': 'AGPL-3',
     'installable': True,

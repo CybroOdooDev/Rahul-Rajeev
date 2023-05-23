@@ -8,7 +8,6 @@ animation: 300ms ease-in-out 0s normal none 1 running fadeInDown;
     .navbar {
     margin: auto 105px;
 
-
     @media screen and(max-width:600px){
         margin:auto;
     }
@@ -17,8 +16,6 @@ animation: 300ms ease-in-out 0s normal none 1 running fadeInDown;
         padding-top: 35px;
     padding-bottom: 35px;
     }
-    
-   
 
     .navbar-toggler {
         border-color: $color-sub-head;
@@ -101,7 +98,6 @@ opacity: .5;
 transition: opacity .6s ease;
 border-radius: 50%;
 
-
     }
 
     .card{
@@ -117,7 +113,6 @@ border-radius: 50%;
             @media screen and(max-width:768px) {
 
                 font-size: 40px;
-                
             }
             span{
                 margin-top: 20px;
@@ -143,12 +138,10 @@ justify-content: center;
     width: 100%;
     background-repeat: no-repeat;
     background-position: center;
-    
-  
+
   }
   .banner-2 {
 
-    
     display: flex;
     align-items: flex-start;
 justify-content: center;
@@ -159,11 +152,9 @@ justify-content: center;
     width: 100%;
     background-repeat: no-repeat;
     background-position: center;
-    
-  
+
   }.banner-3 {
 
-    
     display: flex;
     align-items: flex-start;
 justify-content: center;
@@ -173,6 +164,5 @@ justify-content: center;
     width: 100%;
     background-repeat: no-repeat;
     background-position: center;
-    
   
   }

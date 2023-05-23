@@ -19,16 +19,16 @@
 #    If not, see <http://www.gnu.org/licenses/>.
 #
 #############################################################################
-
-from odoo import models, fields
+from odoo import models
 
 
 class ThemeSplash(models.AbstractModel):
+    """class for enabling and disabling views"""
     _inherit = 'theme.utils'
 
     def _theme_splash_post_copy(self, mod):
+        """function for enabling and disabling views"""
         self.enable_view('website_blog.opt_blog_sidebar_show')
         self.enable_view('website_blog.opt_blog_list_view')
         self.enable_view('website_blog.opt_blog_post_sidebar')
         self.disable_view('website_blog.opt_posts_loop_show_author')
-

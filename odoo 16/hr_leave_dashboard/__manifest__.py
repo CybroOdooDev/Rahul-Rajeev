@@ -21,11 +21,11 @@
 ###################################################################################
 {
     'name': "Advanced Leave Dashboard",
+    'version': '16.0.1.0.0',
     'description': """Advanced Leave Dashboard""",
     'summary': """Leave dashboard module brings a multipurpose graphical dashboard"""
                """ for Time Off module and making the relationship management better and easier""",
     'category': '',
-    'version': '16.0.1.0.0',
     'author': 'Cybrosys Techno Solutions',
     'company': 'Cybrosys Techno Solutions',
     'maintainer': 'Cybrosys Techno Solutions',

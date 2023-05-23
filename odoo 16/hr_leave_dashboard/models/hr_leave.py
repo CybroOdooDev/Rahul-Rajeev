@@ -24,7 +24,7 @@ from odoo import api, models
 import datetime
 
 
-class HRLeave(models.Model):
+class HrLeave(models.Model):
     _inherit = 'hr.leave'
     _description = 'Inheriting Time Off Module'
 
@@ -89,11 +89,11 @@ class HRLeave(models.Model):
             self._cr.execute(query)
         leave = self._cr.dictfetchall()
         absentees = []
-        for i in range(len(leave)):
-            date_from = leave[i].get('date_from')
-            date_to = leave[i].get('date_to')
+        for leave_date in range(len(leave)):
+            date_from = leave[leave_date].get('date_from')
+            date_to = leave[leave_date].get('date_to')
             if date_from <= today <= date_to:
-                absentees.append(leave[i])
+                absentees.append(leave[leave_date])
         return absentees
 
     @api.model
@@ -121,7 +121,6 @@ class HRLeave(models.Model):
             day_num = '5'
         else:
             day_num = '6'
-
         for shift in current_employee.resource_calendar_id.attendance_ids:
             if shift.dayofweek == day_num and shift.hour_from <= float(time) <= shift.hour_to:
                 return shift.name
@@ -152,7 +151,6 @@ class HRLeave(models.Model):
                                                          ('state', '=', 'confirm')]))
         refuse_count = len(self.env['hr.leave'].search([('employee_id', '=', current_employee),
                                                         ('state', '=', 'refuse')]))
-
         approval_status_count = {
             'validate_count': validate_count,
             'confirm_count': confirm_count,

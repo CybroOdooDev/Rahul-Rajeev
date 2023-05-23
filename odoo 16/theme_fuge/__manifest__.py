@@ -61,7 +61,7 @@
     'auto_install': False,
     'assets': {
             'web.assets_frontend': [
-                'theme_fuge/static/src/css/style.css',
+                'theme_fuge/static/src/css/website_customer_contact.css',
                 'theme_fuge/static/src/css/owl.carousel.min.css',
                 'theme_fuge/static/src/css/owl.theme.default.min.css',
                 'theme_fuge/static/src/js/product.js',

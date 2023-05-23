@@ -44,8 +44,6 @@ a{
 }
         
 .blog_link{
-    
-   
     h4{
         margin-top: 50px;
         font-weight: 600;
@@ -81,7 +79,6 @@ a{
                 margin-right: 10px;
             }
         }
-
         .p_words {
             border: 3px solid;
             border-color: transparent;
@@ -105,7 +102,6 @@ a{
                 font-weight: 600;
             }
         }
-
         .blog_details_2 {
             a {
                 color: $color-brand;
@@ -148,7 +144,6 @@ a{
                         background-color: $color-sub-head;
                     }
                 }
-
                 .fb {
                     background: #3b5998;
                     color: #fff;
@@ -200,7 +195,6 @@ a{
                 }
             }
         }
-
         .comments_section {
             margin-top: 90px;
             h4 {
@@ -251,7 +245,6 @@ a{
                     }
                 }
             }
-
             .wrapper2,
             .wrapper1 {
                 border: 1px solid;
@@ -261,7 +254,6 @@ a{
                 padding-top: 20px;
             }
         }
-
         .message_box {
             margin-top: 50px;
             .form {
@@ -299,7 +291,5 @@ a{
                 }
             }
         }
-
-      
     }
 }

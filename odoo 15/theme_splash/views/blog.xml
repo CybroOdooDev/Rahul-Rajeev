@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8" ?>
 <odoo>
     <template id="splash_blog" name="Splash Blog"
               inherit_id="website_blog.blog_post_short">
@@ -127,87 +128,88 @@
                         </t>
                     </t>
                     <!-- Loop through posts: exclude the first one if already displayed as top banner -->
-                        <t t-foreach="posts" t-as="blog_post">
-                            <div t-attf-class="pb-4 col-12 #{colWidth}">
-                                <article
-                                        t-attf-class="o_wblog_post position-relative #{'card h-100' if opt_blog_cards_design else ''}"
-                                        name="blog_post">
-                                    <!-- Assign 'colWidth': 'col-12' is default for List-View and mobile -->
-                                    <t t-if="opt_blog_list_view">
-                                        <div class="Blog">
-                                            <div class="b_left_single">
-                                                <div t-if="opt_posts_loop_show_cover"
-                                                     class="blog_img">
-                                                    <t t-call="website_blog.post_cover_image"/>
-                                                    <div class="blog_date">
-                                                        14 Sep
-                                                    </div>
+                    <t t-foreach="posts" t-as="blog_post">
+                        <div t-attf-class="pb-4 col-12 #{colWidth}">
+                            <article
+                                    t-attf-class="o_wblog_post position-relative #{'card h-100' if opt_blog_cards_design else ''}"
+                                    name="blog_post">
+                                <!-- Assign 'colWidth': 'col-12' is default for List-View and mobile -->
+                                <t t-if="opt_blog_list_view">
+                                    <div class="Blog">
+                                        <div class="b_left_single">
+                                            <div t-if="opt_posts_loop_show_cover"
+                                                 class="blog_img">
+                                                <t t-call="website_blog.post_cover_image"/>
+                                                <div class="blog_date">
+                                                    14 Sep
                                                 </div>
-                                                <div class="wrapper">
-                                                    <a class="blog_link">
-                                                        <h4>
-                                                            <t t-call="website_blog.post_heading"/>
-                                                        </h4>
+                                            </div>
+                                            <div class="wrapper">
+                                                <a class="blog_link">
+                                                    <h4>
+                                                        <t t-call="website_blog.post_heading"/>
+                                                    </h4>
+                                                </a>
+                                                <div class="comment">
+                                                    <span class="fa fa-user">
+                                                        <a t-esc="blog_post.author_id.name"/>
+                                                    </span>
+                                                    <span t-if="posts_list_show_parent_blog"
+                                                          class=" fa fa-folder-open text-muted">
+                                                        <a t-attf-href="/blog/#{slug(blog_post.blog_id)}"
+                                                           t-field="blog_post.blog_id"/>
+                                                    </span>
+                                                </div>
+                                                <div class="blog_details">
+                                                    <p class="para">
+                                                        <t t-call="website_blog.post_teaser"/>
+                                                    </p>
+                                                    <a t-attf-href="/blog/#{slug(blog_post.blog_id)}/#{slug(blog_post)}"
+                                                       class="btn btn-primary">
+                                                        Read more
+                                                        <i class="fa fa-chevron-right ml-2"/>
                                                     </a>
-                                                    <div class="comment">
-                                                        <span class="fa fa-user">
-                                                            <a t-esc="blog_post.author_id.name"/>
-                                                        </span>
-                                                        <span t-if="posts_list_show_parent_blog"
-                                                              class=" fa fa-folder-open text-muted">
-                                                            <a t-attf-href="/blog/#{slug(blog_post.blog_id)}"
-                                                               t-field="blog_post.blog_id"/>
-                                                        </span>
-                                                    </div>
-                                                    <div class="blog_details">
-                                                        <p class="para">
-                                                            <t t-call="website_blog.post_teaser"/>
-                                                        </p>
-                                                        <a t-attf-href="/blog/#{slug(blog_post.blog_id)}/#{slug(blog_post)}"
-                                                           class="btn btn-primary">
-                                                            Read more
-                                                            <i class="fa fa-chevron-right ml-2"/>
-                                                        </a>
-                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </t>
-                                </article>
-                            </div>
-                            <!-- List-View Design -->
-
-                            <!-- Grid-View Design -->
-                            <t t-if="not opt_blog_list_view">
-                                <t t-if="opt_posts_loop_show_cover"
-                                   t-call="website_blog.post_cover_image"/>
-                                <div t-att-class="opt_blog_cards_design and 'card-body px-2 py-0 mb-2'">
-                                    <t t-call="website_blog.post_heading"/>
-                                    <div t-if="is_view_active('website_blog.opt_posts_loop_show_teaser')">
-                                        <t t-call="website_blog.post_teaser"/>
                                     </div>
+                                </t>
+                            </article>
+                        </div>
+                        <!-- List-View Design -->
+
+                        <!-- Grid-View Design -->
+                        <t t-if="not opt_blog_list_view">
+                            <t t-if="opt_posts_loop_show_cover"
+                               t-call="website_blog.post_cover_image"/>
+                            <div t-att-class="opt_blog_cards_design and 'card-body px-2 py-0 mb-2'">
+                                <t t-call="website_blog.post_heading"/>
+                                <div t-if="is_view_active('website_blog.opt_posts_loop_show_teaser')">
+                                    <t t-call="website_blog.post_teaser"/>
                                 </div>
-                                <div t-attf-class="o_wblog_normalize_font #{'card-footer px-2 pb-2' if opt_blog_cards_design else 'pr-2 pb-2'}">
-                                    <t t-call="website_blog.post_info"></t>
-                                </div>
-                            </t>
-                            <!-- Add 'unpublished' badge -->
-                            <span t-if="not blog_post.website_published"
-                                  class="bg-danger small py-1 px-2 position-absolute o_not_editable"
-                                  style="top:0; right:0">unpublished
-                            </span>
-                            <!-- List-View Design, add <hr> after post -->
-                            <div t-if="opt_blog_list_view and not blog_post_last"
-                                 class="col-12 mt-2 mb-5 px-2">
-                                <hr/>
+                            </div>
+                            <div t-attf-class="o_wblog_normalize_font #{'card-footer px-2 pb-2' if opt_blog_cards_design else 'pr-2 pb-2'}">
+                                <t t-call="website_blog.post_info"></t>
                             </div>
                         </t>
+                        <!-- Add 'unpublished' badge -->
+                        <span t-if="not blog_post.website_published"
+                              class="bg-danger small py-1 px-2 position-absolute o_not_editable"
+                              style="top:0; right:0">unpublished
+                        </span>
+                        <!-- List-View Design, add <hr> after post -->
+                        <div t-if="opt_blog_list_view and not blog_post_last"
+                             class="col-12 mt-2 mb-5 px-2">
+                            <hr/>
+                        </div>
+                    </t>
                 </div>
             </div>
         </xpath>
     </template>
     <template id="splash_blog_search" name="Splash Blog Search"
               inherit_id="website_blog.sidebar_blog_index">
+<!--        It features a three-section layout with a search form, a category list, and a recent posts list.-->
         <xpath expr="//div[@id='o_wblog_sidebar']" position="replace">
             <div class="blog_right">
                 <div class="sidebar">
@@ -237,7 +239,6 @@
                                 All
                             </a>
                         </h6>
-
                         <ul class="all_categories" t-foreach="blogs"
                             t-as="nav_blog">
                             <a t-attf-href="/blog/#{slug(nav_blog)}">
@@ -263,7 +264,6 @@
                                                t-value="'img_wrap'"/>
                                         </t>
                                     </div>
-
                                     <div class="rec_post_info">
                                         <a t-attf-href="/blog/#{p.blog_id.id}/#{p.id}">
                                             <h4>
@@ -284,15 +284,14 @@
                             Popular Tags
                         </h4>
                         <div class="pop_wrapper">
-                                <t t-call="website_blog.tags_list">
-                                    <t t-set='tags' t-value='other_tags'/>
-                                    <t t-set="showInactive" t-value="True"/>
-                                </t>
+                            <t t-call="website_blog.tags_list">
+                                <t t-set='tags' t-value='other_tags'/>
+                                <t t-set="showInactive" t-value="True"/>
+                            </t>
                         </div>
                     </div>
                 </div>
             </div>
-
         </xpath>
     </template>
 </odoo>

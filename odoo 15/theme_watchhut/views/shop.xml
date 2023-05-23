@@ -1,41 +1,56 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <odoo>
     <data>
-        <template id="watchhut_shop" name="WatchHut Shop" inherit_id="website_sale.products">
+        <template id="watchhut_shop" name="WatchHut Shop"
+                  inherit_id="website_sale.products">
+            <!--             It replaces the products header section with a custom header that -->
+            <!--            includes search, price list, pagination, sorting, and filter options.-->
             <xpath expr="//div[@id='products_grid']" position="replace">
                 <div id="products_grid">
-                <section t-attf-class="product col #{'o_wsale_layout_list' if layout_mode == 'list' else ''}">
-                    <div class="container-fluid">
-                        <div class="row">
-                            <t t-foreach="bins" t-as="tr_product">
-                                <t t-foreach="tr_product" t-as="td_product">
-                                    <t t-if="td_product">
-                                        <t t-set="product" t-value="td_product['product']"/>
-                                        <div class="col-12 col-sm-6 col-md-4 column all">
-                                            <div class="content">
-                                                <div t-att-data-ribbon-id="td_product['ribbon'].id">
-                                                    <div class="test" id="hh">
-                                                        <t t-call="website_sale.products_item">
-                                                        </t>
+                    <section
+                            t-attf-class="product col #{'o_wsale_layout_list' if layout_mode == 'list' else ''}">
+                        <div class="container-fluid">
+                            <div class="row list_row">
+                                <t t-foreach="bins" t-as="tr_product">
+                                    <t t-foreach="tr_product" t-as="td_product">
+                                        <t t-if="td_product">
+                                            <t t-set="product"
+                                               t-value="td_product['product']"/>
+                                            <div class="col-12 col-sm-6 col-md-4 column all list_column">
+                                                <div class="content">
+                                                    <div t-att-data-ribbon-id="td_product['ribbon'].id">
+                                                        <div class="test"
+                                                             id="hh">
+                                                            <t t-call="website_sale.products_item">
+                                                            </t>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>
+                                        </t>
                                     </t>
                                 </t>
-                            </t>
+                            </div>
                         </div>
-                    </div>
-                </section>
+                    </section>
                 </div>
             </xpath>
         </template>
-        <template id="watchhut_shop_images" name="WatchHut Shop Images" inherit_id="website_sale.products_item">
-            <xpath expr="//div[hasclass('oe_product_image')]" position="replace">
+        <template id="watchhut_shop_images" name="WatchHut Shop Images"
+                  inherit_id="website_sale.products_item">
+            <!--            The "watchhut_shop_images" template replaces the product image section -->
+            <!--            with a new card body element, containing a link to the product and a -->
+            <!--            hidden input field for the CSRF token. It also uses a new "image_holder" -->
+            <!--            variable to display the product image using a widget, centered within the card body.-->
+            <xpath expr="//div[hasclass('oe_product_image')]"
+                   position="replace">
                 <div class="card-body p-1 oe_product_image">
-                    <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()" />
-                    <a t-att-href="product_href" class="d-block h-100" itemprop="url">
-                        <t t-set="image_holder" t-value="product._get_image_holder()"/>
+                    <input type="hidden" name="csrf_token"
+                           t-att-value="request.csrf_token()"/>
+                    <a t-att-href="product_href" class="d-block h-100"
+                       itemprop="url">
+                        <t t-set="image_holder"
+                           t-value="product._get_image_holder()"/>
                         <span t-field="image_holder.image_1920"
                               t-options="{'widget': 'image', 'preview_image': 'image_1920'}"
                               class="d-flex h-100 justify-content-center align-items-center"/>
@@ -43,72 +58,100 @@
                 </div>
             </xpath>
         </template>
-        <template id="watchhut_product_pager" name="WatchHut Product Pager" inherit_id="website_sale.products">
-                <xpath expr="//div[@id='products_grid']" position="before">
-                    <div class="products_header products_pager form-inline flex-md-nowrap justify-content-end mb-4">
-                                <t t-call="website_sale.search">
-                                    <t t-set="_classes" t-valuef="w-100 w-md-auto mr-auto mb-2"/>
-                                    <t t-set="search" t-value="original_search or search"/>
-                                </t>
-                                <t t-call="website_sale.pricelist_list">
-                                    <t t-set="_classes" t-valuef="ml-3 mb-2 btn-watchhut"/>
-                                </t>
-                                <t t-call="website.pager"/>
-                            </div>
-                </xpath>
+        <template id="watchhut_product_pager" name="WatchHut Product Pager"
+                  inherit_id="website_sale.products">
+            <!--            The above template adds a product search bar and a price list dropdown -->
+            <!--            to the product page, along with the standard pager. It also adds -->
+            <!--            some classes to these elements for styling purposes.-->
+            <xpath expr="//div[@id='products_grid']" position="before">
+                <div class="products_header products_pager form-inline flex-md-nowrap justify-content-end mb-4">
+                    <t t-call="website_sale.search">
+                        <t t-set="_classes"
+                           t-valuef="w-100 w-md-auto mr-auto mb-2"/>
+                        <t t-set="search" t-value="original_search or search"/>
+                    </t>
+                    <t t-call="website_sale.pricelist_list">
+                        <t t-set="_classes" t-valuef="ml-3 mb-2 btn-watchhut"/>
+                    </t>
+                    <t t-call="website.pager"/>
+                </div>
+            </xpath>
         </template>
 
-        <template id="watchhut_add_grid_or_list_option" inherit_id="theme_watchhut.watchhut_product_pager" active="True" customize_show="True" name="Watchhut Grid or List button">
-        <xpath expr="//div[hasclass('products_header')]/t[@t-call='website.pager']" position="after">
-            <div class="btn-group btn-group-toggle ml-3 mb-2 d-none d-sm-inline-flex o_wsale_apply_layout btn-secondary" data-toggle="buttons">
-                <label t-attf-class="btn btn-light border-0 #{'active' if layout_mode != 'list' else None} fa fa-th-large o_wsale_apply_grid" title="Grid">
-                    <input type="radio" name="wsale_products_layout" t-att-checked="'checked' if layout_mode != 'list' else None"/>
-                </label>
-                <label t-attf-class="btn btn-light border-0 #{'active' if layout_mode == 'list' else None} fa fa-th-list o_wsale_apply_list" title="List">
-                    <input type="radio" name="wsale_products_layout" t-att-checked="'checked' if layout_mode == 'list' else None"/>
-                </label>
-            </div>
-        </xpath>
-    </template>
+        <template id="watchhut_add_grid_or_list_option"
+                  inherit_id="theme_watchhut.watchhut_product_pager"
+                  active="True" customize_show="True"
+                  name="Watchhut Grid or List button">
+            <!--        This is a template that adds a grid or list option to a product page in the Watchhut theme. It inserts two buttons with icons -->
+            <!--            that allow the user to switch between a grid and a list layout for displaying the products.-->
+            <xpath expr="//div[hasclass('products_header')]/t[@t-call='website.pager']"
+                   position="after">
+                <div class="btn-group btn-group-toggle ml-3 mb-2 d-none d-sm-inline-flex o_wsale_apply_layout btn-secondary"
+                     data-toggle="buttons">
+                    <label t-attf-class="btn btn-light border-0 #{'active' if layout_mode != 'list' else None} fa fa-th-large o_wsale_apply_grid"
+                           title="Grid">
+                        <input type="radio" name="wsale_products_layout"
+                               t-att-checked="'checked' if layout_mode != 'list' else None"/>
+                    </label>
+                    <label t-attf-class="btn btn-light border-0 #{'active' if layout_mode == 'list' else None} fa fa-th-list o_wsale_apply_list"
+                           title="List">
+                        <input type="radio" name="wsale_products_layout"
+                               t-att-checked="'checked' if layout_mode == 'list' else None"/>
+                    </label>
+                </div>
+            </xpath>
+        </template>
 
-        <template id="watchhut_sort" inherit_id="theme_watchhut.watchhut_product_pager" customize_show="True" name="Show Sort by">
-        <xpath expr="//div[hasclass('products_header')]" position="inside">
-            <t t-set="list_price_asc_label">Price - Low to High</t>
-            <t t-set="list_price_desc_label">Price - High to Low</t>
-            <t t-set="newest_arrivals_desc_label">Newest arrivals</t>
-            <t t-set="name_asc_label">Name</t>
-            <t t-set="website_sale_sortable" t-value="[
+        <template id="watchhut_sort"
+                  inherit_id="theme_watchhut.watchhut_product_pager"
+                  customize_show="True" name="Show Sort by">
+            <!--            The template adds a dropdown menu to sort products on a webpage by different criteria, -->
+            <!--            such as price or name. It uses Bootstrap classes to create a dropdown toggle button -->
+            <!--            and menu with clickable items.-->
+            <xpath expr="//div[hasclass('products_header')]" position="inside">
+                <t t-set="list_price_asc_label">Price - Low to High</t>
+                <t t-set="list_price_desc_label">Price - High to Low</t>
+                <t t-set="newest_arrivals_desc_label">Newest arrivals</t>
+                <t t-set="name_asc_label">Name</t>
+                <t t-set="website_sale_sortable" t-value="[
                 (list_price_asc_label, 'list_price asc'),
                 (list_price_desc_label, 'list_price desc'),
                 (newest_arrivals_desc_label, 'create_date desc'),
                 (name_asc_label, 'name asc')
             ]"/>
-            <t t-set="website_sale_sortable_current" t-value="[sort for sort in website_sale_sortable if sort[1]==request.params.get('order', '')]"/>
-            <div class="o_sortby_dropdown dropdown dropdown_sorty_by ml-3 pb-2 btn-watchhut">
-                <a role="button" href="#" class="dropdown-toggle btn btn-light border-0 px-0 text-muted align-baseline" data-toggle="dropdown">
-                    <span class="d-none d-lg-inline">
-                        <t t-if='website_sale_sortable_current'>
-                            <t t-esc="website_sale_sortable_current[0][0]"/>
+                <t t-set="website_sale_sortable_current"
+                   t-value="[sort for sort in website_sale_sortable if sort[1]==request.params.get('order', '')]"/>
+                <div class="o_sortby_dropdown dropdown dropdown_sorty_by ml-3 pb-2 btn-watchhut">
+                    <a role="button" href="#"
+                       class="dropdown-toggle btn btn-light border-0 px-0 text-muted align-baseline"
+                       data-toggle="dropdown">
+                        <span class="d-none d-lg-inline">
+                            <t t-if='website_sale_sortable_current'>
+                                <t t-esc="website_sale_sortable_current[0][0]"/>
+                            </t>
+                            <t t-else='1'>
+                                Featured
+                            </t>
+                        </span>
+                        <i class="fa fa-sort-amount-asc d-lg-none"/>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right" role="menu">
+                        <t t-foreach="website_sale_sortable" t-as="sortby">
+                            <a role="menuitem" rel="noindex,nofollow"
+                               t-att-href="keep('/shop', order=sortby[1])"
+                               class="dropdown-item">
+                                <span t-out="sortby[0]"/>
+                            </a>
                         </t>
-                        <t t-else='1'>
-                            Featured
-                        </t>
-                    </span>
-                    <i class="fa fa-sort-amount-asc d-lg-none"/>
-                </a>
-                <div class="dropdown-menu dropdown-menu-right" role="menu">
-                    <t t-foreach="website_sale_sortable" t-as="sortby">
-                        <a role="menuitem" rel="noindex,nofollow" t-att-href="keep('/shop', order=sortby[1])" class="dropdown-item">
-                            <span t-out="sortby[0]"/>
-                        </a>
-                    </t>
+                    </div>
                 </div>
-            </div>
-        </xpath>
-    </template>
+            </xpath>
+        </template>
 
-        <template id="watchhut_shop_title" name="WatchHut Shop Title" inherit_id="theme_watchhut.watchhut_product_pager">
-                        <xpath expr="//div[hasclass('products_header')]" position="before">
+        <template id="watchhut_shop_title" name="WatchHut Shop Title"
+                  inherit_id="theme_watchhut.watchhut_product_pager">
+            <!-- Add a banner head  -->
+            <xpath expr="//div[hasclass('products_header')]" position="before">
                 <section class="shop">
                     <section class="banner">
                         <div class="container">
@@ -125,10 +168,3 @@
 
     </data>
 </odoo>
-
-
-
-
-
-
-

@@ -1,11 +1,15 @@
+.. image:: https://img.shields.io/badge/licence-LGPL--3-blue.svg
+    :target: http://www.gnu.org/licenses/lgpl-3.0-standalone.html
+    :alt: License: LGPL-3
+
 Theme College
 ==========
 * Design Web Pages with Theme College
 
 Installation
 ============
-	- www.odoo.com/documentation/14.0/setup/install.html
-	- Install our custom addon
+    - www.odoo.com/documentation/14.0/setup/install.html
+    - Install our custom addon
 
 License
 -------
@@ -31,6 +35,8 @@ Bugs are tracked on GitHub Issues. In case of trouble, please check there if you
 
 Maintainer
 ==========
+.. image:: https://cybrosys.com/images/logo.png
+   :target: https://cybrosys.com
 This module is maintained by Cybrosys Technologies.
 
 For support and more information, please visit https://www.cybrosys.com

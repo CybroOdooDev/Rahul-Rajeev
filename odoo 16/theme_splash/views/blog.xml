@@ -1,6 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
 <odoo>
     <template id="splash_blog" name="Splash Blog"
               inherit_id="website_blog.blog_post_short">
+<!--        Inherits from "website_blog.blog_post_short" and replaces two elements with a banner section and -->
+<!--        a custom blog view. It also includes a pager element for navigating through blog posts.-->
         <xpath expr="//div[@id='o_wblog_blog_top']" position="replace">
             <section class="banner_about">
                 <div class="container">
@@ -44,17 +47,17 @@
                                 </button>
                                 <span class="mr-1">Show:</span>
                                 <div class="btn-group btn-group-sm">
-                                    <a t-attf-class="btn #{state == 'published' and 'btn-success' or 'btn-default bg-white border'}"
-                                       t-attf-href="#{state == 'published' and blog_url(state='') or blog_url(state='published')}">
-                                        <i t-attf-class="fa mr-1 #{state == 'published' and 'fa-check-square-o' or 'fa-square-o'}"/>
-                                        Published (<t t-esc="state_info['published']"/>)
-                                    </a>
-                                    <a t-attf-class="btn #{state == 'unpublished' and 'btn-success' or 'btn-default bg-white border'}"
-                                       t-attf-href="#{state == 'unpublished' and blog_url(state='') or blog_url(state='unpublished')}">
-                                        <i t-attf-class="fa mr-1 #{state == 'unpublished' and 'fa-check-square-o' or 'fa-square-o'}"/>
-                                        Unpublished (<t
-                                            t-esc="state_info['unpublished']"/>)
-                                    </a>
+                    <a t-attf-class="btn #{state == 'published' and 'btn-success' or 'btn-default bg-white border'}"
+                       t-attf-href="#{state == 'published' and blog_url(state='') or blog_url(state='published')}">
+                        <i t-attf-class="fa mr-1 #{state == 'published' and 'fa-check-square-o' or 'fa-square-o'}"/>
+                        Published (<t t-esc="state_info['published']"/>)
+                    </a>
+                    <a t-attf-class="btn #{state == 'unpublished' and 'btn-success' or 'btn-default bg-white border'}"
+                       t-attf-href="#{state == 'unpublished' and blog_url(state='') or blog_url(state='unpublished')}">
+                        <i t-attf-class="fa mr-1 #{state == 'unpublished' and 'fa-check-square-o' or 'fa-square-o'}"/>
+                        Unpublished (<t
+                            t-esc="state_info['unpublished']"/>)
+                    </a>
                                 </div>
                                 <div class="pt-1 font-italic small">This box will not be
                                     visible to your visitors
@@ -140,9 +143,9 @@
                             <!-- Loop through posts: exclude the first one if already displayed as top banner -->
                             <t t-foreach="posts" t-as="blog_post">
                                 <div t-attf-class="pb-4 col-12 #{colWidth}">
-                                    <article
-                                            t-attf-class="o_wblog_post position-relative #{'card h-100' if opt_blog_cards_design else ''}"
-                                            name="blog_post">
+                <article
+                        t-attf-class="o_wblog_post position-relative #{'card h-100' if opt_blog_cards_design else ''}"
+                        name="blog_post">
                                         <!-- Assign 'colWidth': 'col-12' is default for List-View and mobile -->
                                         <t t-if="opt_blog_list_view">
                                             <div class="Blog">
@@ -174,7 +177,7 @@
                                                             <p class="para">
                                                                 <t t-call="website_blog.post_teaser"/>
                                                             </p>
-                                                            <a t-attf-href="/blog/#{slug(blog_post.blog_id)}/#{slug(blog_post)}"
+                                                    <a t-attf-href="/blog/#{slug(blog_post.blog_id)}/#{slug(blog_post)}"
                                                                class="btn btn-primary">
                                                                 Read more
                                                                 <i class="fa fa-chevron-right ml-2"/>
@@ -198,9 +201,9 @@
                                             <t t-call="website_blog.post_teaser"/>
                                         </div>
                                     </div>
-                                    <div t-attf-class="o_wblog_normalize_font #{'card-footer px-2 pb-2' if opt_blog_cards_design else 'pr-2 pb-2'}">
-                                        <t t-call="website_blog.post_info"></t>
-                                    </div>
+        <div t-attf-class="o_wblog_normalize_font #{'card-footer px-2 pb-2' if opt_blog_cards_design else 'pr-2 pb-2'}">
+            <t t-call="website_blog.post_info"></t>
+        </div>
                                 </t>
                                 <!-- Add 'unpublished' badge -->
                                 <span t-if="not blog_post.website_published"
@@ -246,11 +249,11 @@
 
                                 <ul class="all_categories" t-foreach="blogs"
                                     t-as="nav_blog">
-                                    <a t-attf-href="/blog/#{slug(nav_blog)}">
-                                        <li t-attf-class="nav-link #{(blog and nav_blog.id == blog.id) and 'active' or ''}">
-                                            <b t-field="nav_blog.name"/>
-                                        </li>
-                                    </a>
+                                <a t-attf-href="/blog/#{slug(nav_blog)}">
+                                    <li t-attf-class="nav-link #{(blog and nav_blog.id == blog.id) and 'active' or ''}">
+                                        <b t-field="nav_blog.name"/>
+                                    </li>
+                                </a>
                                 </ul>
                             </div>
                             <div class="sidebar_content">

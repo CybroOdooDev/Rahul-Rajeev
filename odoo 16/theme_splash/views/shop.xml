@@ -2,6 +2,9 @@
 <odoo>
     <data>
         <template id="splash_shop" name="Splash Shop" inherit_id="website_sale.products">
+<!--            It is a customization of the product list header for an e-commerce website, -->
+<!--            adding search, price list, pager, category navigation, grid/list view options, -->
+<!--            sorting, and filter buttons.-->
             <xpath expr="//div[hasclass('products_header')]" position="replace">
                 <div class="products_header products_pager btn-toolbar flex-nowrap align-items-center justify-content-between mb-3">
                     <t t-call="website_sale.search">
@@ -53,6 +56,9 @@
         </template>
 
         <template id="splash_pricelist_button" name="Splash Pricelist Button" inherit_id="website_sale.sort">
+<!--            Template overrides the default product sorting options in the Odoo eCommerce website, replacing them-->
+<!--            with a dropdown menu containing sortable fields. It inherits from the -->
+<!--            "website_sale.sort" template and adds additional styling and functionality.-->
             <xpath expr="//div[contains(@t-attf-class, 'o_sortby_dropdown')]" position="replace">
                 <div t-attf-class="o_sortby_dropdown dropdown dropdown_sorty_by ms-lg-3 {{_classes}}">
                     <a role="button" href="#" t-attf-class="dropdown-toggle btn btn-{{navClass}}"
@@ -74,6 +80,5 @@
                 </div>
             </xpath>
         </template>
-
     </data>
 </odoo>

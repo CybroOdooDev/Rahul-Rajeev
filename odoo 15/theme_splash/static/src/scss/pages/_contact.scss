@@ -5,12 +5,9 @@
        display: grid;
        grid-template-columns:  1fr 1fr 1fr 1fr;
        grid-gap: 20px;
-
-
        @media screen and (max-width:996px) {
            grid-template-columns: 2fr 2fr;
        }
-
        @media screen and (max-width:532px) {
         grid-template-columns: 2fr;
     }
@@ -20,7 +17,6 @@
 border: 1px solid;
 border-radius: 8px;
 border-color: $color-border;
-
     .contact_icon{
         max-width: 40px;
         margin: auto;
@@ -30,7 +26,6 @@ border-color: $color-border;
             &:hover{
                 opacity: 1;
             }
-       
         }
     }
     h4{
@@ -58,11 +53,8 @@ border-color: $color-border;
 }
 } 
 }
-
 .contact_form{
     padding-top: 50px;
-    
-   
     .form{
         margin-left: 100px;
         margin-right: 100px;
@@ -81,7 +73,6 @@ border-color: $color-border;
     padding-top: 10px;
         }
         input{
-         
 font-size: 18px;
 padding: 12px 20px;
 line-height: 28px;

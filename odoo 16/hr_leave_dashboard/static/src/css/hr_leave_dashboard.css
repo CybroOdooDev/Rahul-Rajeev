@@ -50,15 +50,20 @@ display :none !important;
     height: 50px;
     overflow: hidden;
     position: relative;
-    left: 69px;
+
 
 }
 .employee_name{
     font-size: 16px !important;
     width: 165px;
-    position: absolute;
+   /* position: absolute; */
     right:62px;
     top:24px;
+}
+.employee_box{
+       display:flex;
+       justify-content:center;
+       align-items:center;
 }
 .divider-box{
 
@@ -78,7 +83,7 @@ width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 43px;
+    height: 80px;
     margin-top: 0px;
     border: 1px solid #cebce1;
     background-color: #eaedf3;

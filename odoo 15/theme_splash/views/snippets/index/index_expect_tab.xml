@@ -1,14 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
 <odoo>
-    <template id="index_expect_snippet" inherit_id="website.snippets"
-              name="index_expect">
-        <xpath expr="//div[@id='snippet_feature']/div[hasclass('o_panel_body')]"
-               position="inside">
-            <t t-snippet="theme_splash.index_expect_feature"
-               t-thumbnail="/theme_splash/static/src/images/snippets/feature-block-3.png"
-            />
-        </xpath>
-    </template>
     <template id="index_expect_feature" name="Index Expect Feature2 snippet">
+        <!--        Designed to showcase the services offered by a commercial or residential sanitizing company. -->
+        <!--        It includes information on what to expect from the service and a call to action -->
+        <!--        for customers to get a price quote.-->
         <section class="expect py-5 pb-5">
             <div class="exp_wrapper">
                 <div class="container">
@@ -70,7 +65,6 @@
                                         <h4>
                                             Get a Price Quote Today!
                                         </h4>
-
                                         <p>
                                             Trust us with all of your commercial
                                             <br/>
@@ -81,7 +75,6 @@
                                                 1-800-654-3210
                                             </a>
                                         </span>
-
                                     </div>
                                 </div>
                             </div>
@@ -89,7 +82,6 @@
                     </div>
                 </div>
             </div>
-
         </section>
     </template>
 </odoo>

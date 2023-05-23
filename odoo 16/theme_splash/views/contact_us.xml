@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8" ?>
 <odoo>
     <template id="contact_us" inherit_id="website.contactus" active="True"
               name="Contact 1">

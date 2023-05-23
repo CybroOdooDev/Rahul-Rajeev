@@ -19,4 +19,4 @@
 #    along with this program.  If not, see <https://www.gnu.org/licenses/>.
 #
 ###################################################################################
-from . import hr_leave, hr_employee, hr_leave_report
+from . import hr_leave, hr_employee
